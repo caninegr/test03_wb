@@ -16,8 +16,11 @@ const ImageComponent = ({ image, sx, ...props }) => {
       <img
         src={image.src.publicURL}
         style={{
-          width: image.width || `100%`,
-          maxWidth: image.maxWidth || `none`
+          //width: image.width || `100%`,
+          width: image.width || `203px`,
+          maxWidth: image.maxWidth || `none`,
+          preserveAspectRatio: 'xMidYMid meet',
+          display: 'block', // Removes any extra space that can occur with inline elements
         }}
         {...props}
       />

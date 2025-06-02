@@ -1,0 +1,11 @@
+{
+  "fonts": {
+    "google": {
+      "families": ["Geologica:400,600,700"]
+    }
+  },
+  "theme": {
+    "headerFontFamily": ["Geologica", "sans-serif"],
+    "bodyFontFamily": ["Geologica", "sans-serif"]
+  }
+}

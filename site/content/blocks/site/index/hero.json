@@ -1,65 +1,39 @@
 {
   "text": [
     {
-      "text": "Smart Commerce Simplified.",
+      "text": "Σκύλος: Εκπαίδευση, Συμπεριφορά & Φιλοξενία",
       "color": "omegaDarker",
-      "variant": "h1"
-    },
+      "variant": "h1",
+      "text-shadow": "-1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red"
+    },    
     {
-      "text": "Hassle-free platform ,and specialists to help you with your marketing campaigns.",
+      "text": "Από μαθήματα για το κουτάβι σου ως τα πιο δύσκολα προβλήματα συμπεριφοράς, προσφέρουμε βοήθεια σε ανθρώπους που πιστεύουν στις λύσεις χωρίς βία.",
       "color": "omegaDarker",
       "variant": "medium"
-    }
+    }  
   ],
   "images": [
     {
-      "src": "../../../assets/flexiblocks/homepage/fintech/hero.png",
+      "src": "../../../assets/flexiblocks/index/hero_larger_stroke.png",
       "alt": "alt text"
-    },
-    {
-      "src": "../../../assets/flexiblocks/homepage/fintech/hero-overlay-one.png",
-      "alt": "alt text",
-      "effects": ["float"],
-      "position": {
-        "bottom": "-5%",
-        "left": "33%"
-      }
-    },
-    {
-      "src": "../../../assets/flexiblocks/homepage/fintech/hero-overlay-two.png",
-      "alt": "alt text",
-      "effects": ["floatFaster"],
-      "position": {
-        "top": "10%",
-        "right": "-7%"
-      }
-    },
-    {
-      "src": "../../../assets/flexiblocks/homepage/fintech/hero-overlay-three.png",
-      "alt": "alt text",
-      "effects": ["float"],
-      "position": {
-        "top": "20%",
-        "left": "25%"
-      }
     }
+
+
   ],
-  "form": {
-    "fields": [
-      {
-        "identifier": "email",
-        "placeholder": {
-          "text": "Enter Your Email Address"
-        }
-      }
-    ],
+  
     "buttons": [
       {
-        "text": "Get Started",
+        "text": "Επικοινώνησε",
         "type": "MODAL",
-        "link": "authentication",
-        "variant": "dark"
+        "link": "contact",
+        "variant": "secondary"
+      },
+      {
+        "text": "Δες το βίντεο",
+        "type": "VIDEO",
+        "link": "https://www.youtube.com/embed/QQV8AcI3LKA?autoplay=1&cc_load_policy=1&modestbranding=1&showinfo=0&rel=0",
+        "variant": "primary"
       }
     ]
-  }
+  
 }

@@ -5,7 +5,7 @@
  *
  */
 
-import holographic from './assets/holographic.jpg'
+import holographic from './assets/holographic.png'
 
 export default {
   heroContainer: {

@@ -1,10 +1,13 @@
+const fontFile = require('./src/@elegantstack/solid-ui-theme/typography-fonts.json')
+
 module.exports = {
   plugins: [
     {
       resolve: '@elegantstack/gatsby-theme-flexiblocks',
       options: {
         createDemoPages: false,
-        colorMode: false
+        colorMode: false,
+        fonts: fontFile.fonts
       }
     },
     {
@@ -12,8 +15,10 @@ module.exports = {
       resolve: '@elegantstack/gatsby-theme-flexiblog-news',
       options: {
         // ATTENTION: Blog will be created on this path
-        basePath: '/blog/',
-        darkMode: false
+        siteUrl: process.env.URL || process.env.VERCEL_URL,
+        darkMode: false,
+        homePostsPerPage: 6,
+        collectionPostsPerPage: 6
       }
     },
         {
@@ -25,6 +30,14 @@ module.exports = {
         host: 'https://thetruthaboutdogs.gr',
         sitemap: 'https://thetruthaboutdogs.gr/sitemap-0.xml',
         policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+        {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Geologica']
+        }
       }
     }
   ],
