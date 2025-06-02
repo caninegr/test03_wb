@@ -1,0 +1,29 @@
+{
+  "collection": [
+    {
+      "buttons": [
+        {
+          "text": "Training",
+          "type": "PAGE",
+          "link": "/",
+          "variant": "links.nav-light"
+        },
+        {
+          "text": "Boarding",
+          "type": "PAGE",
+          "link": "/services/",
+          "variant": "links.nav-light"
+        },
+        {
+          "text": "Rehab",
+          "type": "PAGE",
+          "link": "/services/",
+          "variant": "links.nav-light"
+        }
+      ]
+    },
+    {
+      "buttons": []
+    }
+  ]
+}

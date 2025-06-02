@@ -17,7 +17,11 @@ import FeatureThree from '@solid-ui-blocks/FeaturesWithPhoto/Block03'
 import FeatureThreeMore from '@solid-ui-blocks/Features/Block06'
 import Blog from '@solid-ui-blocks/Blog/Block01'
 import Footer from '@solid-ui-blocks/Footer/Block01'
+
+//+
 import WithRecentPosts from '@solid-ui-blocks/WithRecentPosts'
+import TopNavbar from '@solid-ui-blocks/TopNavbar/Block01'
+
 import { normalizeBlockContentNodes } from '@blocks-helpers'
 import theme from './_theme'
 import styles from './_styles'
@@ -34,6 +38,10 @@ const IndexPage = props => {
       <ModalWithTabs content={content['contact']} />
       <ModalSimple content={content['advertisement']} />
       {/* Blocks */}
+
+      {/* + */}
+      <TopNavbar content={content['top-navbar']} />
+
       <Header content={content['header']} />
       <Divider space='4' />
       <Divider space='4' />
