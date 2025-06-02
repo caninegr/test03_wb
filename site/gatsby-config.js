@@ -15,6 +15,7 @@ module.exports = {
       resolve: '@elegantstack/gatsby-theme-flexiblog-news',
       options: {
         // ATTENTION: Blog will be created on this path
+        basePath: '/blog/',
         siteUrl: process.env.URL || process.env.VERCEL_URL,
         darkMode: false,
         homePostsPerPage: 6,
