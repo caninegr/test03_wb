@@ -37,7 +37,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Geologica']
+          families: ['Geologica', 'sans-serif']
         }
       }
     }
