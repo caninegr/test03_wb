@@ -33,14 +33,7 @@ module.exports = {
         policy: [{userAgent: '*', allow: '/'}]
       }
     },
-        {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Geologica', 'sans-serif']
-        }
-      }
-    }
+
   ],
   // Customize your site metadata:
   siteMetadata: {
