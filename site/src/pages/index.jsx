@@ -21,6 +21,7 @@ import Footer from '@solid-ui-blocks/Footer/Block01'
 //+
 import WithRecentPosts from '@solid-ui-blocks/WithRecentPosts'
 import TopNavbar from '@solid-ui-blocks/TopNavbar/Block01'
+import ChatBot from '../components/ChatBot'
 
 import { normalizeBlockContentNodes } from '@blocks-helpers'
 import theme from './_theme'
@@ -41,6 +42,7 @@ const IndexPage = props => {
 
       {/* + */}
       <TopNavbar content={content['top-navbar']} />
+      <ChatBot />
 
       <Header content={content['header']} />
       <Divider space='4' />
