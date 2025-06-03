@@ -101,13 +101,27 @@ const ButtonComponent = ({ content, children, styles = {}, className }) => {
   const { setActiveModal } = useContext(ModalContext)
   const { setActiveTab } = useContext(TabsContext)
 
-  const { type, text, link, target, variant, width, bg, icon } = content
+  const { type, text, link, target, variant, width, bg, icon, title, description } = content
+
+  // Debug logging
+  console.log('ButtonComponent content:', { text, title, description, icon })
 
   const { Component, linkProps } = buildLinkProps({
     content: { type, link, target, variant },
     setActiveModal,
     setActiveTab
   })
+
+  // Create accessibility props
+  const accessibilityProps = {}
+  if (title) {
+    accessibilityProps.title = title
+    console.log('Adding title:', title)
+  }
+  if (description) {
+    accessibilityProps['aria-label'] = description
+    console.log('Adding aria-label:', description)
+  }
 
   return (
     <Component
@@ -118,11 +132,20 @@ const ButtonComponent = ({ content, children, styles = {}, className }) => {
         position: `relative`,
         ...styles
       }}
+      {...accessibilityProps}
       {...linkProps}
       className={[linkProps.className, className].join(' ')}
     >
       <Box sx={{ display: `inline-block` }}>
-        <Icon content={icon} size='xs' mr='1' /> {text}
+        <Icon 
+          content={{
+            ...icon,
+            title: icon?.title || title,
+            description: icon?.description || description
+          }} 
+          size='xs' 
+          mr='1' 
+        /> {text}
       </Box>
 
       {children}

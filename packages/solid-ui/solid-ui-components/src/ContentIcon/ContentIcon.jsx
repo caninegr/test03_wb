@@ -6,13 +6,22 @@ import { Box, css } from 'theme-ui'
 const ContentIcon = ({ content, round, p, ...props }) => {
   if (!content) return null
 
-  const { src, ...contentRest } = content
+  const { src, title, description, ...contentRest } = content
 
   if (!src) return null
 
   const mergedProps = mergeWith({}, props, contentRest, (a, b) =>
     b === null ? a : undefined
   )
+
+  // Create accessibility props for the SVG
+  const svgAccessibilityProps = {}
+  if (title) {
+    svgAccessibilityProps.title = title
+  }
+  if (description) {
+    svgAccessibilityProps['aria-label'] = description
+  }
 
   return (
     <Box
@@ -33,6 +42,7 @@ const ContentIcon = ({ content, round, p, ...props }) => {
           size: `icon.${mergedProps.size || 'md'}`,
           display: `block`
         })}
+        {...svgAccessibilityProps}
       />
     </Box>
   )
