@@ -40,6 +40,12 @@ module.exports = {
           families: ['Geologica', 'sans-serif']
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://thetruthaboutdogs.gr`,
+      },
     }
   ],
   // Customize your site metadata:
