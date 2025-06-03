@@ -15,6 +15,7 @@ const ImageComponent = ({ image, sx, ...props }) => {
     return (
       <img
         src={image.src.publicURL}
+        alt={image.alt || ''}
         style={{
           //width: image.width || `100%`,
           width: image.width || `203px`,
