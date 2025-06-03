@@ -104,7 +104,7 @@ const ButtonComponent = ({ content, children, styles = {}, className }) => {
   const { type, text, link, target, variant, width, bg, icon, title, description } = content
 
   // Debug logging
-  console.log('ButtonComponent content:', { text, title, description, icon })
+  // console.log('ButtonComponent content:', { text, title, description, icon })
 
   const { Component, linkProps } = buildLinkProps({
     content: { type, link, target, variant },
@@ -113,15 +113,15 @@ const ButtonComponent = ({ content, children, styles = {}, className }) => {
   })
 
   // Create accessibility props
-  const accessibilityProps = {}
-  if (title) {
-    accessibilityProps.title = title
-    console.log('Adding title:', title)
-  }
-  if (description) {
-    accessibilityProps['aria-label'] = description
-    console.log('Adding aria-label:', description)
-  }
+  // const accessibilityProps = {}
+  // if (title) {
+  //   accessibilityProps.title = title
+  //   console.log('Adding title:', title)
+  // }
+  // if (description) {
+  //   accessibilityProps['aria-label'] = description
+  //   console.log('Adding aria-label:', description)
+  // }
 
   return (
     <Component
