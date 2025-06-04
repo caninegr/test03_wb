@@ -1,0 +1,121 @@
+{
+  "text": [
+    {
+      "text": "Our Users **Love Learning** With Our App",
+      "variant": "h2"
+    },
+    {
+      "text": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt.",
+      "variant": "medium"
+    },
+    {
+      "text": "Consectetur sed do eiusmod tempor incididunt adipisicing  eiusmod tempor incididunt elit.",
+      "variant": "medium"
+    }
+  ],
+  "collection": [
+    {
+      "container": {
+        "variant": "cards.paper",
+        "bg": "#f8fdf9"
+      },
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/training.png",
+          "alt": "Professional training session"
+        }
+      ],
+      "text": [
+        {
+          "text": "Training",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Comprehensive training programs designed to help you master new skills and reach your full potential."
+        }
+      ],
+      "icon": {
+        "src": "../../../assets/flexiblocks/icons/bx-message-detail.svg",
+        "bg": "#D3E7FE",
+        "color": "#276BF0"
+      }
+    },
+    {
+      "container": {
+        "variant": "cards.paper",
+        "bg": "#f8fdf9"
+      },
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/boarding.png",
+          "alt": "Modern boarding facility"
+        }
+      ],
+      "text": [
+        {
+          "text": "Boarding",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Safe and comfortable boarding facilities with 24/7 care and peace of mind while you're away."
+        }
+      ],
+      "icon": {
+        "src": "../../../assets/flexiblocks/icons/bx-planet.svg",
+        "bg": "#FFF3CC",
+        "color": "#FF9D01"
+      }
+    },
+    {
+      "container": {
+        "variant": "cards.paper",
+        "bg": "#f8fdf9"
+      },
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/rehab.png",
+          "alt": "Rehabilitation therapy session"
+        }
+      ],
+      "text": [
+        {
+          "text": "Rehab",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Specialized rehabilitation services with state-of-the-art equipment and experienced professionals."
+        }
+      ],
+      "icon": {
+        "src": "../../../assets/flexiblocks/icons/bx-coin.svg",
+        "bg": "#FEE8D1",
+        "color": "#F7491D"
+      }
+    },
+    {
+      "container": {
+        "variant": "cards.paper",
+        "bg": "#f8fdf9"
+      },
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/academy.png",
+          "alt": "Academy learning environment"
+        }
+      ],
+      "text": [
+        {
+          "text": "Academy",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Advanced academy programs with structured learning paths and certification opportunities."
+        }
+      ]
+    }
+  ]
+}

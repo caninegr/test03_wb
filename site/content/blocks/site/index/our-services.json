@@ -1,0 +1,123 @@
+{
+  "text": [
+    {
+      "text": "Choose Your Platform",
+      "color": "beta",
+      "variant": "h4"
+    },
+    {
+      "text": "Available on All Platforms",
+      "variant": "h2"
+    }
+  ],
+  "icon": {
+    "src": "../../../assets/flexiblocks/icons/bx-analyse.svg",
+    "alt": "alt text"
+  },
+  "collection": [
+    {
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/training.png",
+          "alt": "Training service"
+        }
+      ],
+      "text": [
+        {
+          "text": "Training",
+          "color": "alpha",
+          "variant": "h4"
+        },
+        {
+          "text": "As an Internet marketing strategy."
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Learn More →",
+          "type": "PAGE",
+          "url": "/training",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/boarding.png",
+          "alt": "Boarding service"
+        }
+      ],
+      "text": [
+        {
+          "text": "Boarding",
+          "color": "alpha",
+          "variant": "h4"
+        },
+        {
+          "text": "Powerful desktop application."
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Learn More →",
+          "type": "PAGE",
+          "url": "/boarding",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/rehab.png",
+          "alt": "Rehab service"
+        }
+      ],
+      "text": [
+        {
+          "text": "Rehab",
+          "color": "alpha",
+          "variant": "h4"
+        },
+        {
+          "text": "Social media marketing."
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Learn More →",
+          "type": "PAGE",
+          "url": "/rehab",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/academy.png",
+          "alt": "Academy service"
+        }
+      ],
+      "text": [
+        {
+          "text": "Academy",
+          "color": "alpha",
+          "variant": "h4"
+        },
+        {
+          "text": "Content marketing is a form."
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Learn More →",
+          "type": "PAGE",
+          "url": "/academy",
+          "variant": "secondary"
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,13 @@ import ModalSimple from '@solid-ui-blocks/Modal/Block02'
 import Header from '@solid-ui-blocks/Header/Block01'
 import Hero from '@solid-ui-blocks/Hero/Block01'
 import Companies from '@solid-ui-blocks/Companies/Block01'
+
+// -
 import Features from '@solid-ui-blocks/Features/Block05'
+
+// +
+import OurServices from '@solid-ui-blocks/Features/Block08'
+
 import FeatureOne from '@solid-ui-blocks/FeaturesWithPhoto/Block07'
 import WhyChooseUs from '@solid-ui-blocks/Features/Block01'
 import FeatureTwo from '@solid-ui-blocks/FeaturesWithPhoto/Block06'
@@ -51,9 +57,11 @@ const IndexPage = props => {
       <Divider space='4' />
       <Companies content={content['companies']} />
       <Divider space='5' />
+
       <Divider space='5' />
-      <Features content={content['features']} />
+      <OurServices content={content['our-services']} />
       <Divider space='5' />
+
       <Divider space='5' />
       <Container variant='wide' sx={styles.featureOneContainer}>
         <FeatureOne content={content['feature-one']} />
