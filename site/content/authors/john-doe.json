@@ -1,8 +1,8 @@
 {
   "name": "John Doe",
-  "title": "Owner",
-  "description": "Ho",
-  "thumbnail": "john-doe.png",
+  "title": "Physio",
+  "description": "Sed commodo, est quis maximus fermentum, massa ipsum euismod neque, in varius risus tellus quis lacus. Sed ac bibendum odio.",
+  "thumbnail": "steve-grant.png",
   "social": [
     {
       "name": "Instagram",
@@ -17,5 +17,5 @@
       "url": "https://example.com"
     }
   ],
-  "skills": ["ASP.NET", "Assembly", "JavaScript"]
+  "skills": ["Public Relation", "Market Analyst", "Designer"]
 }
