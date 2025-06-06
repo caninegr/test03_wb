@@ -29,6 +29,7 @@ const WithRecentPosts = ({ children, limit = 3 }) => {
       },
       {
         text: post.author.name,
+        //text: post.author?.name || 'Unknown Author',
         color: 'omegaDark'
       },
       {
