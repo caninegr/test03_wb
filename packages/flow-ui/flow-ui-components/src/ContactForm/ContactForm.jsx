@@ -26,21 +26,21 @@ const ContactForm = ({ handleSubmit, submitting, success }) => (
   >
     {success === true && (
       <Message variant='success'>
-        Thank you for contacting us. We'll get back to you soon!
+        Ευχαριστούμε για το μήνυμα, θα επικοινωνήσουμε σύντομα μαζί σας!
       </Message>
     )}
     {success === false && (
       <Message variant='error'>
-        Something went wrong. Please try again later!
+        Κάτι δεν πήγε καλά, δοκίμασε ξανά!
       </Message>
     )}
     <Box variant='forms.row'>
       <Box variant='forms.column'>
-        <Label htmlFor='contact-form-name'>Name</Label>
+        <Label htmlFor='contact-form-name'>Ονοματεπώνυμο</Label>
         <Input type='text' id='contact-form-name' name='name' required />
       </Box>
       <Box variant='forms.column'>
-        <Label htmlFor='contact-form-company'>Company Name</Label>
+        <Label htmlFor='contact-form-company'>Όνομα Σκύλου</Label>
         <Input type='text' id='contact-form-company' name='company' />
       </Box>
     </Box>
@@ -49,17 +49,17 @@ const ContactForm = ({ handleSubmit, submitting, success }) => (
         <Label htmlFor='contact-form-email'>Email</Label>
         <Input
           type='email'
-          placeholder='email@example.com'
+          placeholder=''
           id='contact-form-email'
           name='email'
           required
         />
       </Box>
       <Box variant='forms.column'>
-        <Label htmlFor='contact-form-phone'>Phone Number</Label>
+        <Label htmlFor='contact-form-phone'>Τηλέφωνο</Label>
         <Input
           type='tel'
-          placeholder='(xxx) xxx-xxxx'
+          placeholder=''
           id='contact-form-phone'
           name='phone'
         />

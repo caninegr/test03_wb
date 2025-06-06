@@ -55,9 +55,9 @@ module.exports = {
     name: 'CaneSentio',
     description: 'Cane Sentio Dev Site',
     siteUrl: 'https://thetruthaboutdogs.gr',
-    address: 'New York, NY',
-    email: 'email@example.com',
-    phone: '+1 (888) 888-8888',
+    address: 'Δρυμός, Θεσσαλονίκη',
+    email: 'info@cane.gr',
+    phone: '+30 2311 115099',
 
     //Site Social Media Links
     social: [
