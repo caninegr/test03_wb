@@ -1,16 +1,15 @@
 const fontFile = require('./src/@elegantstack/solid-ui-theme/typography-fonts.json')
 
 module.exports = {
-  plugins: [  
+  plugins: [    
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          `Geologica\:400,600,700`, // Greek characters supported
-          `Open Sans\:400,600,700`, // Greek characters supported
-        ],
-        display: 'swap', // This adds font-display: swap automatically
-      },
+        google: {
+          families: ['Geologica', 'sans-serif']
+        },
+      display: 'swap'
+      }
     },    
     {
       resolve: '@elegantstack/gatsby-theme-flexiblocks',
@@ -43,14 +42,6 @@ module.exports = {
         policy: [{userAgent: '*', allow: '/'}]
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     google: {
-    //       families: ['Geologica', 'sans-serif']
-    //     }
-    //   }
-    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
