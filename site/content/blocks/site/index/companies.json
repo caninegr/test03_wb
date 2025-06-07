@@ -3,57 +3,59 @@
     {
       "text": [
         {
-          "text": "AirBnB"
+          "text": "IAABC"
         }
       ],
       "icon": {
-        "src": "../../../assets/flexiblocks/companies/company-airbnb.svg",
+        "src": "../../../assets/flexiblocks/companies/company-iaabc-color.svg",
+        "alt": "alt text"
+      }
+    },     
+    {
+      "text": [
+        {
+          "text": "APDT"
+        }
+      ],
+      "icon": {
+        "src": "../../../assets/flexiblocks/companies/company-apdt.svg",
+        "alt": "alt text"
+      }
+    },   
+    {
+      "text": [
+        {
+          "text": "Animal Welfare - University of Edinburgh"
+        }
+      ],
+      "icon": {
+        "src": "../../../assets/flexiblocks/companies/company-edinburgh.svg",
         "alt": "alt text"
       }
     },
     {
       "text": [
         {
-          "text": "Amazon Web Services"
+          "text": "Compass"
         }
       ],
       "icon": {
-        "src": "../../../assets/flexiblocks/companies/company-amazon-web-services.svg",
+        "src": "../../../assets/flexiblocks/companies/company-compass.svg",
         "alt": "alt text"
       }
     },
     {
       "text": [
         {
-          "text": "Cisco"
+          "text": "Duke"
         }
       ],
       "icon": {
-        "src": "../../../assets/flexiblocks/companies/company-shopify.svg",
-        "alt": "alt text"
-      }
-    },
-    {
-      "text": [
-        {
-          "text": "Confluence"
-        }
-      ],
-      "icon": {
-        "src": "../../../assets/flexiblocks/companies/company-confluence.svg",
-        "alt": "alt text"
-      }
-    },
-    {
-      "text": [
-        {
-          "text": "Linkedin"
-        }
-      ],
-      "icon": {
-        "src": "../../../assets/flexiblocks/companies/company-linkedin.svg",
+        "src": "../../../assets/flexiblocks/companies/company-duke.svg",
         "alt": "alt text"
       }
     }
+
+
   ]
 }
