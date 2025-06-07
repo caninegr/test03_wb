@@ -54,11 +54,11 @@ const IndexPage = props => {
       <Container variant='wide' sx={styles.heroContainer}>
         <Hero content={content['hero']} reverse />
       </Container>
-      <Divider space='4' />
+      <Divider space='2' />
       <Companies content={content['companies']} />
-      <Divider space='5' />
+      <Divider space='3' />
 
-      <Divider space='5' />
+      <Divider space='3' />
       <OurServices content={content['our-services']} />
       <Divider space='5' />
 
