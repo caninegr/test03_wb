@@ -5,7 +5,9 @@
  *
  */
 
-import holographic from './assets/holographic.png'
+
+//import holographic from './assets/holographic.svg'
+import holographic from './assets/holographic.webp?url'
 
 export default {
   heroContainer: {
