@@ -11,7 +11,7 @@
     },
       {      
     "text": "Ξεχωριστά ή συνδυαστικά.",
-    "color": "gray",
+    "color": "omegaDark",
     "variant": "h5"
   }
 
@@ -24,14 +24,14 @@
     {
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/training.png",
+          "src": "../../../assets/flexiblocks/images/services/training.jpg",
           "alt": "Training service"
         }
       ],
       "text": [
         {
           "text": "Εκπαίδευση",
-          "color": "alpha",
+          "color": "omegaDarker",
           "variant": "h3"
         },
         {
@@ -50,14 +50,14 @@
     {
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/boarding.png",
+          "src": "../../../assets/flexiblocks/images/services/boarding.jpg",
           "alt": "Boarding service"
         }
       ],
       "text": [
         {
           "text": "Ξενοδοχείο",
-          "color": "alpha",
+          "color": "omegaDarker",
           "variant": "h3"
         },
         {
@@ -76,14 +76,14 @@
     {
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/rehab.png",
+          "src": "../../../assets/flexiblocks/images/services/rehab.jpg",
           "alt": "Rehab service"
         }
       ],
       "text": [
         {
           "text": "Αποκατάσταση",
-          "color": "alpha",
+          "color": "omegaDarker",
           "variant": "h3"
         },
         {
@@ -102,14 +102,14 @@
     {
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/academy.png",
+          "src": "../../../assets/flexiblocks/images/services/academy.jpg",
           "alt": "Academy service"
         }
       ],
       "text": [
         {
           "text": "Ακαδημία Εκπαιδευτών",
-          "color": "alpha",
+          "color": "omegaDarker",
           "variant": "h3"
         },
         {

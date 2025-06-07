@@ -21,7 +21,7 @@
       },
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/training.png",
+          "src": "../../../assets/flexiblocks/images/services/training.jpg",
           "alt": "Professional training session"
         }
       ],
@@ -48,7 +48,7 @@
       },
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/boarding.png",
+          "src": "../../../assets/flexiblocks/images/services/boarding.jpg",
           "alt": "Modern boarding facility"
         }
       ],
@@ -75,7 +75,7 @@
       },
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/rehab.png",
+          "src": "../../../assets/flexiblocks/images/services/rehab.jpg",
           "alt": "Rehabilitation therapy session"
         }
       ],
@@ -102,7 +102,7 @@
       },
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/academy.png",
+          "src": "../../../assets/flexiblocks/images/services/academy.jpg",
           "alt": "Academy learning environment"
         }
       ],
