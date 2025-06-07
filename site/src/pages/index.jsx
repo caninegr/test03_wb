@@ -11,7 +11,7 @@ import Hero from '@solid-ui-blocks/Hero/Block01'
 import Companies from '@solid-ui-blocks/Companies/Block01'
 
 // -
-import Features from '@solid-ui-blocks/Features/Block05'
+//import Features from '@solid-ui-blocks/Features/Block05'
 
 // +
 import OurServices from '@solid-ui-blocks/Features/Block08'
@@ -56,9 +56,9 @@ const IndexPage = props => {
       </Container>
       <Divider space='2' />
       <Companies content={content['companies']} />
-      <Divider space='3' />
+      <Divider space='5' />
 
-      <Divider space='3' />
+      <Divider space='4' />
       <OurServices content={content['our-services']} />
       <Divider space='5' />
 

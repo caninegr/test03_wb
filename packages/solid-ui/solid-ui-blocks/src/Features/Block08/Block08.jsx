@@ -25,7 +25,13 @@ const styles = {
 }
 
 const FeaturesBlock05 = ({ content: { text, collection } }) => (
-  <Container as={Reveal}>
+  <Container 
+    as={Reveal}
+    sx={{
+      maxWidth: ['100%', '90%', '1400px'], // Wider container: mobile full-width, tablet 90%, desktop 1400px (up from ~1200px default)
+      px: [3, 4, 5] // More horizontal padding on larger screens
+    }}
+  >
     <Box sx={{ textAlign: `center` }}>
       <ContentText content={text} />
     </Box>
@@ -49,37 +55,37 @@ const FeaturesBlock05 = ({ content: { text, collection } }) => (
                     boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px'
                   }}
                 >
-                  {/* Image section - full width, outside ContentContainer */}
+                  {/* Image section - larger and more prominent */}
                   {images && (
                     <Box sx={{ 
                       position: 'relative',
                       overflow: 'hidden',
-                      width: '100%' // Ensure full width
+                      width: '100%'
                     }}>
                       <ContentImages 
                         content={{ images }}
                         sx={{
-                          width: '100%', // Full width container
+                          width: '100%',
                           '& > *': {
-                            width: '100%', // Any wrapper elements
+                            width: '100%',
                             margin: 0,
                             padding: 0
                           },
                           '& img': {
-                            width: '100% !important', // Force full width
-                            height: '280px', // INCREASED from 180px to 280px
+                            width: '100% !important',
+                            height: ['320px', '360px', '400px'], // INCREASED: 320px mobile, 360px tablet, 400px desktop
                             objectFit: 'cover',
                             display: 'block',
                             margin: 0,
                             padding: 0,
-                            maxWidth: 'none' // Override any max-width constraints
+                            maxWidth: 'none'
                           }
                         }}
                       />
                     </Box>
                   )}
                   
-                  {/* Content section - with proper padding */}
+                  {/* Content section - more compact */}
                   <ContentContainer
                     content={container}
                     variant='cards.paper'
@@ -87,16 +93,23 @@ const FeaturesBlock05 = ({ content: { text, collection } }) => (
                       height: `full`,
                       border: 'none',
                       boxShadow: 'none',
-                      borderRadius: images ? '0 0 default default' : 'default'
+                      borderRadius: images ? '0 0 default default' : 'default',
+                      p: [3, 3, 4] // Slightly more compact padding
                     }}
                   >
-                    <Icon content={icon} size='md' mr='3' mb='3' />
-                    <ContentText content={text?.[0]} />
+                    <Icon content={icon} size='md' mr='3' mb='2' /> {/* Reduced bottom margin */}
+                    <ContentText 
+                      content={text?.[0]} 
+                      sx={{ mb: 2 }} // Reduced margin below title
+                    />
                     <Flex sx={{ alignItems: `center`, flexWrap: `wrap` }}>
                       <ContentText
                         content={text?.slice(1)}
-                        sx={styles.itemDescription}
-                        mt={[3, null, 0]}
+                        sx={{
+                          ...styles.itemDescription,
+                          mb: 2 // Reduced margin
+                        }}
+                        mt={[2, null, 0]} // Reduced top margin
                       />
                       {collection && (
                         <Box sx={{ flexGrow: 1, mr: [3, null, 0] }}>
@@ -108,7 +121,7 @@ const FeaturesBlock05 = ({ content: { text, collection } }) => (
                     </Flex>
                     {buttons && (
                       <>
-                        <Divider space={3} />
+                        <Divider space={2} /> {/* Reduced divider space */}
                         <ContentButtons content={buttons} />
                       </>
                     )}

@@ -19,7 +19,7 @@ import styles from './_styles'
 //+
 import TopNavbar from '@solid-ui-blocks/TopNavbar/Block01'
 
-const Services = props => {
+const Rehab = props => {
   const { allBlockContent } = props.data
   const content = normalizeBlockContentNodes(allBlockContent?.nodes)
 
@@ -69,4 +69,4 @@ export const query = graphql`
   }
 `
 
-export default Services
+export default Rehab

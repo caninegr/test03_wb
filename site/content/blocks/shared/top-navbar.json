@@ -5,7 +5,7 @@
         {
           "text": "Training",
           "type": "PAGE",
-          "link": "/",
+          "link": "/training",
           "variant": "links.nav-light"
         },
         {
@@ -17,7 +17,7 @@
         {
           "text": "Rehab",
           "type": "PAGE",
-          "link": "/services/",
+          "link": "/rehab/",
           "variant": "links.nav-light"
         }
       ]
