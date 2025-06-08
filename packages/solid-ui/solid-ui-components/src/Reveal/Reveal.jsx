@@ -41,7 +41,10 @@ export default Reveal
 
 Reveal.defaultProps = {
   effect: 'fadeInUp',
-  threshold: 0.3,
+  // -
+  //threshold: 0.3,
+  // +
+  threshold: 0.2,
   duration: 0.5,
   delay: 0,
   transition: null,

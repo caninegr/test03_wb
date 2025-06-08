@@ -37,7 +37,9 @@ const FeaturesBlock05 = ({ content: { text, collection } }) => (
               <Reveal
                 key={`item-${index}`}
                 effect='fadeInGrow'
-                delay={0.15 * (index + 1)}
+                //-
+                // delay={0.15 * (index + 1)}
+                delay={0.05 * (index + 1)}
                 css={css(styles.listItem)}
               >
                 <ContentContainer

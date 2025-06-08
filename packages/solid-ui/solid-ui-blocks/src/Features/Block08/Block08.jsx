@@ -27,6 +27,8 @@ const styles = {
 const FeaturesBlock05 = ({ content: { text, collection } }) => (
   <Container 
     as={Reveal}
+  //threshold={0}          // Trigger immediately when any part enters viewport
+  //rootMargin="-50px" 
     sx={{
       maxWidth: ['100%', '90%', '1400px'], // Wider container: mobile full-width, tablet 90%, desktop 1400px (up from ~1200px default)
       px: [3, 4, 5] // More horizontal padding on larger screens
