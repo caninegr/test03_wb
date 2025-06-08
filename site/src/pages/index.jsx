@@ -56,9 +56,9 @@ const IndexPage = props => {
       </Container>
       <Divider space='1' />
       <Companies content={content['companies']} />
-      <Divider space='3' />
+      <Divider space='2' />
 
-      <Divider space='3' />
+      <Divider space='2' />
       <OurServices content={content['our-services']} />
       <Divider space='3' />
 
