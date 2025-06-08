@@ -44,7 +44,7 @@ Reveal.defaultProps = {
   // -
   //threshold: 0.3,
   // +
-  threshold: 0.1,
+  threshold: 0.12,
   duration: 0.5,
   //delay: 0,
   delay: 0.3,
