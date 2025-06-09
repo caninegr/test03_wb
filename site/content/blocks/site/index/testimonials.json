@@ -1,13 +1,13 @@
 {
   "text": [
     {
+      "text": "Τι λένε για εμάς",
+      "variant": "h2"
+    },    
+    {
       "text": "The words from these guys are pure pleasure.",
       "color": "alpha",
       "variant": "h4"
-    },
-    {
-      "text": "We Care About Our Customers",
-      "variant": "h2"
     }
   ],
   "collection": [
@@ -23,52 +23,52 @@
           "space": 2
         },
         {
-          "text": "Εμπιστευτήκαμε τον Βασίλη και την ομάδα του Cane Sentio αρχικά για την εκπαίδευση της Τζέινα και στη συνεχεια για την φιλοξενία της! Εξαιρετικός χώρος και επαγγελματική αντιμετώπιση. Είδαμε αποτελέσματα από την πρώτη κιόλας επίσκεψη και το σκυλάκι μας απολαμβάνει να τρέχει και να κυλιέται στο γκαζόν. Την προσέχουν σαν δική τους!",
+          "text": "Εμπιστευτήκαμε τον Βασίλη και την ομάδα του Cane Sentio αρχικά για την εκπαίδευση της Τζέινα και στη συνέχεια για την φιλοξενία της! Εξαιρετικός χώρος και επαγγελματική αντιμετώπιση. Είδαμε αποτελέσματα από την πρώτη κιόλας επίσκεψη και το σκυλάκι μας απολαμβάνει να τρέχει και να κυλιέται στο γκαζόν. Την προσέχουν σαν δική τους!",
           "variant": "p"
         }
       ],
       "avatar": {
-        "src": "../../../assets/flexiblocks/testimonials/john-doe.png",
+        "src": "../../../assets/flexiblocks/testimonials/maria_k_tzeina.jpg",
         "alt": "alt text"
       }
     },
     {
       "text": [
         {
-          "text": "Jane Smith",
+          "text": "Δανάη Α.",
           "variant": "h5"
         },
         {
-          "text": "Developer at AwesomeCo",
+          "text": "σκυλομαμά της Σπάρκι",
           "variant": "h6"
         },
         {
-          "text": "Sed commodo, est quis maximus fermentum, massa ipsum euismod neque, in varius risus tellus quis lacus. Sed ac bibendum odio.",
+          "text": "Μετά από μια αποτυχημένη εμπειρία εκπαίδευσης με διορθώσεις, η Σπάρκι, ένα ανασφαλές ημίαιμο, είχε αναπτύξει έντονη επιθετικότητα. Στο Cane Sentio, ο Βασίλης μάς βοήθησε να κατανοήσουμε πραγματικά τον σκύλο μας, να δουλέψουμε με τα ερεθίσματα που την στρεσάρουν, και να ενδυναμώσουμε τον δεσμό μας μαζί της — πάντα με 100% θετικές μεθόδους. Οι επιθετικές συμπεριφορές έχουν πλέον εξαλειφθεί, και συνεχίζουμε με χαρά τη συνεργασία μας. Ευχαριστούμε για τη φροντίδα, τη συνέπεια και για το υπέροχο περιβάλλον που προσφέρετε. Δώσατε στη Σπάρκι μια νέα αρχή!",
           "variant": "p"
         }
       ],
       "avatar": {
-        "src": "../../../assets/flexiblocks/testimonials/jane-smith.png",
+        "src": "../../../assets/flexiblocks/testimonials/danai_a_sparki.jpg",
         "alt": "alt text"
       }
     },
     {
       "text": [
         {
-          "text": "Sarah Doe",
+          "text": "Κατερίνα Μ.",
           "variant": "h5"
         },
         {
-          "text": "Affiliate Marketer",
+          "text": "σκυλομαμά του Όλιβερ",
           "variant": "h6"
         },
         {
-          "text": "Sed commodo, est quis maximus fermentum, massa ipsum euismod neque, in varius risus tellus quis lacus. Sed ac bibendum odio.",
+          "text": "Μετά από δύο χρόνια και τρεις ανεπιτυχείς προσπάθειες με άλλους εκπαιδευτές, απευθυνθήκαμε στον Βασίλη — και ήταν η καλύτερη απόφαση. Με ενσυναίσθηση και ικανότητα, μας καθοδήγησε ώστε να κατανοήσουμε πραγματικά τον σκύλο μας και να αποκαταστήσουμε την οικογενειακή ηρεμία. Το σκυλί μας τον αγαπά, κι εμείς εκτιμούμε βαθιά την αποτελεσματικότητά του. Εξαιρετικός επαγγελματίας με υπέροχη ομάδα. Τον συστήνουμε ανεπιφύλακτα, είτε έχετε 'εύκολο' είτε 'δύσκολο' σκυλάκι!",
           "variant": "p"
         }
       ],
       "avatar": {
-        "src": "../../../assets/flexiblocks/testimonials/sarah-doe.png",
+        "src": "../../../assets/flexiblocks/testimonials/katerina_m_oliver.jpg",
         "alt": "alt text"
       }
     }
