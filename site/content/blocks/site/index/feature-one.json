@@ -1,16 +1,17 @@
 {
   "text": [
     {
-      "text": "Unlimited Lessons",
-      "color": "beta",
-      "variant": "h4"
-    },
-    {
-      "text": "Unlimited Collection of **Advanced Lessons**",
+      "text": "Μας αρέσουν οι γνωριμίες",
       "variant": "h2"
     },
     {
-      "text": "Target your audience based on their interests. Lorem ipsum dolor sit amet, consectetur magna aliqua.",
+      "text": "Ξεκινάμε με μία συζήτηση",
+      "color": "beta",
+      "variant": "h4"
+    },
+
+    {
+      "text": "Πώς να ξεκινήσετε με την εκπαίδευση, φιλοξενία ή αποκατάσταση του σκύλου σας.",
       "variant": "medium"
     }
   ],
@@ -33,36 +34,36 @@
     {
       "text": [
         {
-          "text": "Automatic interest detection",
+          "text": "Επικοινωνήστε μαζί μας",
           "color": "omegaDarker",
           "variant": "h5"
         },
         {
-          "text": "Tempor incididunt ut labore et dolore magna aliqua consectetur magna aliqua."
+          "text": "Μιλήστε μας λίγο για τον σκύλο σας και τις ανάγκες σας."
         }
       ]
     },
     {
       "text": [
         {
-          "text": "Daily email reports",
+          "text": "Κανονίζουμε μία επίσκεψη",
           "color": "omegaDarker",
           "variant": "h5"
         },
         {
-          "text": "Tempor incididunt ut labore et dolore magna aliqua consectetur magna aliqua."
+          "text": "Θα οργανώσουμε ραντεβού στις εγκαταστάσεις μας."
         }
       ]
     },
     {
       "text": [
         {
-          "text": "Daily email reports",
+          "text": "Γνωριζόμαστε από κοντά",
           "color": "omegaDarker",
           "variant": "h5"
         },
         {
-          "text": "Tempor incididunt ut labore et dolore magna aliqua consectetur magna aliqua."
+          "text": "Ο σκύλος θα παίξει ελεύθερος και ασφαλής και εμείς θα μιλήσουμε για τις ανάγκες σας."
         }
       ]
     }
