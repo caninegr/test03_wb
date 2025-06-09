@@ -37,7 +37,10 @@ const ContentBlock01 = ({ content: { collection }, reverse }) => (
                 <Reveal
                   effect='fadeInRight'
                   delay={1}
-                  css={css({ mb: [4, null, null, 0] })}
+                  css={css({ 
+                    mb: [4, null, null, 0],
+                    display: ['none', null, null, 'block'] // Hide on small screens
+                  })}
                 >
                   <ContentButtons content={collection[0].buttons} />
                 </Reveal>
@@ -55,9 +58,16 @@ const ContentBlock01 = ({ content: { collection }, reverse }) => (
       >
         {collection?.[1] && (
           <Reveal effect='fadeInLeft'>
-            <Box sx={{ textAlign: ['center', 'left'] }}>
+            <Box sx={{ 
+              textAlign: ['center', 'left'],
+              lineHeight: 2.1
+               }}>
               <ContentText content={collection[1]?.text} ml='0' />
+              <Divider space={3} />
+              <ContentText content={collection[2]?.text} ml='0' />
             </Box>
+            
+            {/* Original collection[1] buttons */}
             {collection[1]?.buttons && (
               <>
                 <Divider space={3} />
@@ -67,6 +77,23 @@ const ContentBlock01 = ({ content: { collection }, reverse }) => (
                   css={css({ mb: [4, null, null, 0] })}
                 >
                   <ContentButtons content={collection[1].buttons} />
+                </Reveal>
+              </>
+            )}
+            
+            {/* collection[0] buttons - only show on small screens */}
+            {collection[0]?.buttons && (
+              <>
+                <Divider space={3} />
+                <Reveal
+                  effect='fadeInRight'
+                  delay={1}
+                  css={css({ 
+                    mb: [4, null, null, 0],
+                    display: ['block', null, null, 'none'] // Show only on small screens
+                  })}
+                >
+                  <ContentButtons content={collection[0].buttons} />
                 </Reveal>
               </>
             )}

@@ -114,6 +114,12 @@ export default {
       backgroundSize: `cover`
     }
   },
+  contentTwoContainer: {
+    bg: `omegaDarker`,
+    borderRadius: `xl`,
+    py: [4, 5],
+    px: [4, 0]
+  },  
   whyChooseUsContainer: {
     bg: `omegaDarker`,
     borderRadius: `xl`,

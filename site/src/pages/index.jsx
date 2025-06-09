@@ -15,6 +15,7 @@ import Companies from '@solid-ui-blocks/Companies/Block01'
 
 // +
 import OurServices from '@solid-ui-blocks/Features/Block08'
+import Content from '@solid-ui-blocks/Content/Block01'
 
 import FeatureOne from '@solid-ui-blocks/FeaturesWithPhoto/Block07'
 import WhyChooseUs from '@solid-ui-blocks/Features/Block01'
@@ -66,11 +67,19 @@ const IndexPage = props => {
         <FeatureOne content={content['feature-one']} />
       </Container>
       <Divider space='5' />
+
+      <Divider space='5' />
+      <Container variant='wide' sx={styles.contentTwoContainer}>
+        <Content content={content['content-two']} />
+      </Container>
+      <Divider space='5' />
+
       <Divider space='5' />
       <Container variant='wide' sx={styles.whyChooseUsContainer}>
         <WhyChooseUs content={content['why-choose-us']} />
       </Container>
       <Divider space='5' />
+
       <Divider space='5' />
       <Container variant='wide' sx={styles.featureTwoContainer}>
         <FeatureTwo content={content['feature-two']} reverse />
