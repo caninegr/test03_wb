@@ -7,6 +7,14 @@
  *
  */
 
+const preventFlash = {
+  '& .top-navbar-wrapper': {
+    minHeight: '60px',
+    display: 'flex',
+    alignItems: 'center'
+  }
+}
+
 export default {
   colors: {
     background: `#FFFFFF`,
