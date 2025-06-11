@@ -16,13 +16,13 @@ import Companies from '@solid-ui-blocks/Companies/Block01'
 // +
 import OurServices from '@solid-ui-blocks/Features/Block08'
 import Testimonials from '@solid-ui-blocks/Testimonials/Block01'
-import Content from '@solid-ui-blocks/Content/Block01'
+//import Content from '@solid-ui-blocks/Content/Block01'
 
 import FeatureOne from '@solid-ui-blocks/FeaturesWithPhoto/Block07'
 import WhyChooseUs from '@solid-ui-blocks/Features/Block01'
-import FeatureTwo from '@solid-ui-blocks/FeaturesWithPhoto/Block06'
-import FeatureThree from '@solid-ui-blocks/FeaturesWithPhoto/Block03'
-import FeatureThreeMore from '@solid-ui-blocks/Features/Block06'
+//import FeatureTwo from '@solid-ui-blocks/FeaturesWithPhoto/Block06'
+//import FeatureThree from '@solid-ui-blocks/FeaturesWithPhoto/Block03'
+//import FeatureThreeMore from '@solid-ui-blocks/Features/Block06'
 import Blog from '@solid-ui-blocks/Blog/Block01'
 import Footer from '@solid-ui-blocks/Footer/Block01'
 
@@ -49,8 +49,8 @@ const IndexPage = props => {
 
       {/* + */}
       <TopNavbar content={content['top-navbar']} />
-
       <Header content={content['header']} />
+
       <Divider space='4' />
       <Divider space='4' />
       <Container variant='wide' sx={styles.heroContainer}>
