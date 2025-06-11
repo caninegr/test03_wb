@@ -42,7 +42,14 @@ const styles = {
   },
   logoContainer: {
     flexShrink: 0,
-    mr: [null, null, 3, 5]
+    mr: [null, null, 3, 5],
+      // Add explicit logo dimensions
+  '& img': {
+    width: ['203px', null, '203px'],  // Responsive: 100px mobile, 120px desktop
+    height: ['44.58px', null, '44.58px'],   // Responsive: 32px mobile, 40px desktop
+    objectFit: 'contain',
+    display: 'block'
+    }
   },
   desktopMenu: {
     display: [`none`, null, `block`],
