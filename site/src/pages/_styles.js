@@ -125,11 +125,6 @@ export default {
     borderRadius: `xl`,
     py: 5,
     px: [4, 0]
-  },
-    topNavbarContainer: {
-    minHeight: ['42px', '48px'], // Theme-UI responsive array: [mobile, desktop]
-    '& > *': {
-      minHeight: 'inherit'
-    }
   }
+  
 }

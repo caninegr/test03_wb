@@ -8,7 +8,7 @@ module.exports = {
         google: {
           families: ['Geologica', 'sans-serif']
         },
-      display: 'swap'
+      display: 'auto'
       }
     },    
     {
