@@ -40,6 +40,33 @@ const IndexPage = props => {
 
   return (
     <Layout theme={theme} {...props}>
+
+      {/* CRITICAL CSS - Add this before any components */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          /* Prevent layout shift during hydration */
+          body { margin: 0; }
+          
+          /* Reserve space for TopNavbar immediately */
+          .top-navbar-wrapper {
+            min-height: 42px !important;
+            background: #2d3748 !important; /* Your navbar dark background */
+            display: block !important;
+          }
+          
+          @media (min-width: 768px) {
+            .top-navbar-wrapper {
+              min-height: 45px !important;
+            }
+          }
+          
+          /* Prevent header from jumping */
+          .header-wrapper {
+            display: block !important;
+          }
+        `
+      }} />
+
       <Seo title='Home' />
       {/* Modals */}
       <ModalWithTabs content={content['authentication']} reverse />
@@ -48,8 +75,17 @@ const IndexPage = props => {
       {/* Blocks */}
 
       {/* + */}
-      <TopNavbar sx={styles.topNavbarContainer} content={content['top-navbar']} />
-      <Header content={content['header']} />
+      {/* <TopNavbar sx={styles.topNavbarContainer} content={content['top-navbar']} />
+      <Header content={content['header']} /> */}
+
+            {/* TopNavbar with critical wrapper */}
+      <div className="top-navbar-wrapper">
+        <TopNavbar content={content['top-navbar']} />
+      </div>
+      
+      <div className="header-wrapper">
+        <Header content={content['header']} />
+      </div>
 
       <Divider space='4' />
       <Divider space='4' />
