@@ -48,7 +48,7 @@ const IndexPage = props => {
       {/* Blocks */}
 
       {/* + */}
-      <TopNavbar content={content['top-navbar']} />
+      <TopNavbar sx={styles.topNavbarContainer} content={content['top-navbar']} />
       <Header content={content['header']} />
 
       <Divider space='4' />
