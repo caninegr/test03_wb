@@ -42,6 +42,10 @@ export default {
     fontSize: 3,
     mb: 3
   },
+  smallmedium: {
+    fontSize: 2,
+    mb: 2
+  },  
   small: {
     fontSize: 1,
     m: 0

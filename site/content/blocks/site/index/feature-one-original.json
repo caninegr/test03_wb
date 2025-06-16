@@ -1,0 +1,71 @@
+{
+  "text": [
+    {
+      "text": "Μας αρέσουν οι γνωριμίες",
+      "variant": "h2"
+    },
+    {
+      "text": "Ξεκινάμε με μία συζήτηση:",
+      "color": "beta",
+      "variant": "h4"
+    },
+
+    {
+      "text": "Πώς να ξεκινήσετε με την εκπαίδευση, φιλοξενία ή αποκατάσταση του σκύλου σας.",
+      "variant": "medium"
+    }
+  ],
+  "images": [
+    {
+      "src": "../../../assets/flexiblocks/homepage/fintech/feature-one.png",
+      "alt": "alt text"
+    },
+    {
+      "src": "../../../assets/flexiblocks/homepage/fintech/feature-one-overlay-one.png",
+      "alt": "alt text",
+      "effects": ["fadeInUp", "float"],
+      "position": {
+        "bottom": "10%",
+        "right": "0%"
+      }
+    }
+  ],
+  "collection": [
+    {
+      "text": [
+        {
+          "text": "Επικοινωνήστε μαζί μας",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Μιλήστε μας λίγο για τον σκύλο σας και τις ανάγκες σας."
+        }
+      ]
+    },
+    {
+      "text": [
+        {
+          "text": "Κανονίζουμε μία επίσκεψη",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Θα οργανώσουμε ραντεβού στις εγκαταστάσεις μας."
+        }
+      ]
+    },
+    {
+      "text": [
+        {
+          "text": "Γνωριζόμαστε από κοντά",
+          "color": "omegaDarker",
+          "variant": "h5"
+        },
+        {
+          "text": "Ο σκύλος θα παίξει ελεύθερος και ασφαλής και εμείς θα μιλήσουμε για τις ανάγκες σας."
+        }
+      ]
+    }
+  ]
+}
