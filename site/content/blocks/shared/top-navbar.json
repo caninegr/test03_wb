@@ -3,19 +3,19 @@
     {
       "buttons": [
         {
-          "text": "Training",
+          "text": "Εκπαιδευση",
           "type": "PAGE",
           "link": "/training",
           "variant": "links.nav-light"
         },
         {
-          "text": "Boarding",
+          "text": "Φιλοξενια",
           "type": "PAGE",
           "link": "/services/",
           "variant": "links.nav-light"
         },
         {
-          "text": "Rehab",
+          "text": "Βελτιωση",
           "type": "PAGE",
           "link": "/rehab/",
           "variant": "links.nav-light"

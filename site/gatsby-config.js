@@ -95,7 +95,7 @@ module.exports = {
     //Footer Menu Items (2 Sets)
     footerMenu: [
       {
-        title: 'Quick Links',
+        title: 'Σύνδεσμοι',
         items: [
           {
             name: 'Advertise with us',

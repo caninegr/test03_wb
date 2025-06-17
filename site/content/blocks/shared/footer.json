@@ -9,24 +9,24 @@
     {
       "text": [
         {
-          "text": "Quick Links"
+          "text": "Σύνδεσμοι"
         }
       ],
       "buttons": [
         {
-          "text": "Home",
+          "text": "Αρχική",
           "type": "PAGE",
           "link": "/",
           "variant": "links.nav-light"
         },
         {
-          "text": "Blog",
+          "text": "Άρθρα",
           "type": "PAGE",
           "link": "/blog",
           "variant": "links.nav-light"
         },
         {
-          "text": "Contact Us",
+          "text": "Επικοινωνία",
           "type": "MODAL",
           "link": "contact",
           "variant": "links.nav-light"
@@ -68,32 +68,35 @@
       ],
       "buttons": [
         {
-          "text": "Github",
+          "text": "Instagram",
           "type": "PAGE",
-          "link": "https://github.com/gatsby",
+          "link": "https://instagram.com/canesentio",
           "variant": "links.nav-light",
+          "target": "_blank",
           "icon": {
-            "src": "../../assets/flexiblocks/icons/bxl-github.svg",
-            "color": "#2f4f4f"
+            "src": "../../assets/flexiblocks/icons/bxl-instagram.svg",
+            "color": "#c13584"
           }
         },
         {
-          "text": "Twitter",
+          "text": "Facebook",
           "type": "PAGE",
-          "link": "https://twitter.com/gatsby",
+          "link": "https://facebook.com/canesentio",
           "variant": "links.nav-light",
+          "target": "_blank",
           "icon": {
-            "src": "../../assets/flexiblocks/icons/bxl-twitter.svg",
+            "src": "../../assets/flexiblocks/icons/bxl-facebook.svg",
             "color": "#1da1f2"
           }
         },
         {
-          "text": "Instagram",
+          "text": "TikTok",
           "type": "PAGE",
-          "link": "https://instagram.com/gatsby",
+          "link": "https://tiktok.com/@canesentio",
           "variant": "links.nav-light",
+          "target": "_blank",
           "icon": {
-            "src": "../../assets/flexiblocks/icons/bxl-instagram.svg",
+            "src": "../../assets/flexiblocks/icons/bxl-tiktok.svg",
             "color": "#c13584"
           }
         }
