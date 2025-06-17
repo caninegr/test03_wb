@@ -36,7 +36,7 @@
     {
       "text": [
         {
-          "text": "Legal Stuff"
+          "text": "Νομικό Περιεχόμενο"
         }
       ],
       "buttons": [
@@ -47,9 +47,9 @@
           "variant": "links.nav-light"
         },
         {
-          "text": "Cookie Policy",
-          "type": "PAGE",
-          "link": "",
+          "text": "Ρυθμίσεις Cookies",
+          "type": "PAGE", 
+          "link": "#cookie-policy",
           "variant": "links.nav-light"
         },
         {

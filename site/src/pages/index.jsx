@@ -29,6 +29,7 @@ import Footer from '@solid-ui-blocks/Footer/Block01'
 //+
 import WithRecentPosts from '@solid-ui-blocks/WithRecentPosts'
 import TopNavbar from '@solid-ui-blocks/TopNavbar/Block01'
+import CookieBanner from '@solid-ui-components/CookieBanner'
 
 import { normalizeBlockContentNodes } from '@blocks-helpers'
 import theme from './_theme'
@@ -92,6 +93,7 @@ const IndexPage = props => {
         </WithRecentPosts>
       <Divider space='5' />
       <Footer content={content['footer']} />
+      <CookieBanner />
     </Layout>
   )
 }

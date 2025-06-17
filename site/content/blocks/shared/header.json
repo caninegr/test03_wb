@@ -62,7 +62,7 @@
     {
       "buttons": [
         {
-          "text": "Contact Us",
+          "text": "Επικοινωνία",
           "type": "MODAL",
           "link": "contact",
           "variant": "secondary"

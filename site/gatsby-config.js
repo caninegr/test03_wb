@@ -10,6 +10,28 @@ module.exports = {
         },
       display: 'auto'
       }
+    },  
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'YOUR_GA_TRACKING_ID', // Replace with your GA ID
+          cookieName: 'gatsby-gdpr-google-analytics',
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        googleTagManager: {
+          trackingId: 'YOUR_GTM_ID', // Optional: Replace with your GTM ID
+          cookieName: 'gatsby-gdpr-google-tagmanager',
+          dataLayerName: 'dataLayer',
+        },
+        facebookPixel: {
+          pixelId: 'YOUR_FB_PIXEL_ID', // Optional: Replace with your FB Pixel ID
+          cookieName: 'gatsby-gdpr-facebook-pixel',
+        },
+        // Define the development environment
+        environments: ['production', 'development']
+      },
     },    
     {
       resolve: '@elegantstack/gatsby-theme-flexiblocks',

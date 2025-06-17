@@ -21,30 +21,8 @@ const styles = {
 }
 
 const FooterBlock01 = ({ content: { images, collection } }) => {
-  // Handle cookie policy link click
-  const handleFooterClick = (e) => {
-    //console.log('Footer clicked:', e.target.textContent) // Debug log
-    
-    // Check if the clicked element or its text content contains "Cookie Policy"
-    if (e.target.textContent === "Ρυθμίσεις Cookies" || 
-        e.target.innerText === "Ρυθμίσεις Cookies" ||
-        e.target.textContent?.includes("Ρυθμίσεις Cookies")) {
-      
-      //console.log('Cookie Policy clicked!') // Debug log
-      e.preventDefault()
-      e.stopPropagation()
-      
-      if (typeof window !== 'undefined' && window.showCookieBanner) {
-        console.log('Calling showCookieBanner') // Debug log
-        window.showCookieBanner()
-      } else {
-        //console.log('showCookieBanner not available') // Debug log
-      }
-    }
-  }
-
   return (
-    <Box sx={styles.wrapper} onClick={handleFooterClick}>
+    <Box sx={styles.wrapper}>
       <Container px='4'>
         <Flex sx={styles.footer}>
           <Box sx={{ minWidth: 200 }}>
@@ -56,9 +34,9 @@ const FooterBlock01 = ({ content: { images, collection } }) => {
             <Box pt='2' mb={[2, 4]}>
               © {new Date().getFullYear()}, All Rights Reserved.
             </Box>
-            {/* <Box>
+            <Box>
               <PoweredByGatsby />
-            </Box> */}
+            </Box>
           </Box>
           {collection?.map(
             ({ text, buttons }, index) =>
