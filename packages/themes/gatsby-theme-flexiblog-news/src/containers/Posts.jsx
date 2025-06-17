@@ -22,7 +22,7 @@ const Posts = ({
           limit={3}
           columns={[1, 2, 3]}
           variant={['horizontal-md', 'vertical-cover']}
-          title="Editor's Pick This Week"
+          title="Επιλεγμένα Άρθρα από Εμάς"
           loading='eager'
           omitCategory
         />

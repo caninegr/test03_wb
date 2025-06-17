@@ -36,7 +36,7 @@ const WithRecentPosts = ({ children, limit = 3 }) => {
         text: post.date
       },
       {
-        text: `${post.timeToRead} min read`
+        text: `${post.timeToRead} ' διάβασμα`
       }
     ],
     images: [

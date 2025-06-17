@@ -1,0 +1,21 @@
+{
+  "name": "Βασίλειος Παππάς",
+  "title": "Εκπαιδευτής σκύλων",
+  "description": "Συμπεριφορά σκύλων για ανθρώπους",
+  "thumbnail": "vpap.jpg",
+  "social": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/canesentio"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/canesentio"
+    },
+    {
+      "name": "Website",
+      "url": "https://cane.gr"
+    }
+  ],
+  "skills": ["προβλήματα συμπεριφοράς", "έρευνα & διάσωση", "ακαδημία εκπαιδευτών"]
+}

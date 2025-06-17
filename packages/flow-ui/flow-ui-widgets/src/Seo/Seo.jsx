@@ -70,7 +70,7 @@ const Seo = ({
     metaTags.push({ name: 'twitter:label1', value: 'Reading time' })
     metaTags.push({
       name: 'twitter:data1',
-      value: `${timeToRead} min read`
+      value: `${timeToRead} ' διάβασμα`
     })
   }
 
