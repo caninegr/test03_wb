@@ -2,13 +2,13 @@
   "text": [
     {
       "text": "Ολοκληρωμένες Υπηρεσίες για το Κατοικίδιο σου",
-      "color": "beta",
-      "variant": "h4"
+      "color": "white",
+      "variant": "h2"
     },
     {
       "text": "Γιατί να διαλέξεις το Cane Sentio;",
-      "color": "white",
-      "variant": "h2"
+      "color": "beta",
+      "variant": "h3"
     }
   ],
   "collection": [
