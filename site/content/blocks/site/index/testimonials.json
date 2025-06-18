@@ -15,11 +15,11 @@
       "text": [
         {
           "text": "Μαρία και Ρήγας",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με την Τζέινα",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -40,11 +40,11 @@
       "text": [
         {
           "text": "Θοδωρής και Δανάη",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με την Σπάρκι",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -65,11 +65,11 @@
       "text": [
         {
           "text": "Κατερίνα και Ναταλία",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με τον Όλιβερ",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -90,11 +90,11 @@
       "text": [
         {
           "text": "Harry",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με την Μπόνι",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -115,11 +115,11 @@
       "text": [
         {
           "text": "Νίκος",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με τον Πάρη",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -140,11 +140,11 @@
       "text": [
         {
           "text": "Βάσια",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με τον Μάρλεϊ",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -165,11 +165,11 @@
       "text": [
         {
           "text": "Αλέξανδρος και Χριστίνα",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με την Λούνα",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
@@ -190,11 +190,11 @@
       "text": [
         {
           "text": "Χριστίνα",
-          "variant": "h5"
+          "variant": "h4"
         },
         {
           "text": "με τον Γκόγκο",
-          "variant": "h6",
+          "variant": "h5",
           "color" : "gray"
         },
         {
