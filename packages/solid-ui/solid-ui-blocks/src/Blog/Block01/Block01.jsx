@@ -145,9 +145,9 @@ const BlogBlock01 = ({ content: { text, collection, buttons } }) => (
                                 flexBasis: `full`
                               }}
                             >
-                              <Link color={text?.[3]?.color}>
+                              {/* <Link color={text?.[3]?.color}> */}
                                 <strong>{text?.[3]?.text}</strong>
-                              </Link>
+                              {/* </Link> */}
                             </ContentText>
                             {/* Info */}
                             <Flex sx={{ alignItems: `center` }}>
