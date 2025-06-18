@@ -42,7 +42,7 @@
         {
           "text": "Καθοδήγησε →",
           "type": "PAGE",
-          "url": "/training",
+          "link": "/training",
           "variant": "secondary"
         }
       ]
@@ -68,7 +68,7 @@
         {
           "text": "Μείνε →",
           "type": "PAGE",
-          "url": "/boarding",
+          "link": "/services",
           "variant": "secondary"
         }
       ]
@@ -94,7 +94,7 @@
         {
           "text": "Βελτίωσε →",
           "type": "PAGE",
-          "url": "/rehab",
+          "link": "/rehab",
           "variant": "secondary"
         }
       ]
@@ -120,7 +120,7 @@
         {
           "text": "Μάθε →",
           "type": "PAGE",
-          "url": "/academy",
+          "link": "/training",
           "variant": "secondary"
         }
       ]
