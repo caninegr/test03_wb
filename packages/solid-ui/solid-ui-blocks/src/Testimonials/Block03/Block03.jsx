@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { Container, Flex, Box, css } from 'theme-ui'
 import { ImQuotesRight } from 'react-icons/im'
 import { AiFillStar } from 'react-icons/ai'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Reveal from '@solid-ui-components/Reveal'
 import Divider from '@solid-ui-components/Divider'
 import Tabs from '@solid-ui-components/Tabs'
@@ -130,6 +131,24 @@ const TestimonialsBlock03 = ({
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [totalTabs, currentTab])
 
+  // Arrow button navigation
+  const navigateToTab = (direction) => {
+    if (totalTabs <= 1) return
+    
+    const targetIndex = direction === 'prev' 
+      ? (currentTab - 1 + totalTabs) % totalTabs
+      : (currentTab + 1) % totalTabs
+    
+    const tabContainer = tabsRef.current
+    if (tabContainer) {
+      const dots = tabContainer.querySelectorAll('[role="tab"], .tab-dot, button[aria-selected]')
+      if (dots[targetIndex]) {
+        dots[targetIndex].click()
+        setCurrentTab(targetIndex)
+      }
+    }
+  }
+
   return (
     <Container>
       {/* Title and Subtitle Section - Above testimonials */}
@@ -146,116 +165,196 @@ const TestimonialsBlock03 = ({
       </Box>
 
       {/* Testimonials Section - Full width with touch support */}
-      <Box 
-        ref={tabsRef}
-        tabIndex={0} // Make focusable for keyboard navigation
-        sx={{ 
-          maxWidth: '900px', 
-          mx: 'auto',
-          touchAction: 'pan-y pinch-zoom', // Allow vertical scrolling but handle horizontal swipes
-          userSelect: isDragging.current ? 'none' : 'auto', // Prevent text selection while swiping
-          outline: 'none', // Remove focus outline since we're not styling it
-          '&:focus-visible': {
-            outline: '2px solid',
-            outlineColor: 'beta',
-            outlineOffset: '2px'
-          }
-        }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        aria-label="Testimonials carousel - use arrow keys to navigate"
-      >
-        <Reveal effect='fadeInUp' delay={0.2}>
-          <Tabs variant='dots' position='bottom' space={3} autoplay>
-            {collection?.map(({ container, text, avatar }, index) => (
-              <ContentContainer
-                content={container}
-                variant='cards.paper'
-                key={`item-${index}`}
-                sx={{ position: `relative` }}
-              >
-                <Flex
-                  sx={{
-                    alignItems: `center`,
-                    position: `relative`,
-                    flexWrap: `wrap`,
-                    zIndex: 1,
-                    flexDirection: ['column', 'row'], // Stack on mobile, side-by-side on desktop
-                    textAlign: ['center', 'left']
-                  }}
-                >
-                  <Box sx={{ 
-                    width: [120, 150], // Smaller on mobile
-                    mb: [3, 0] // Margin bottom on mobile only
-                  }}>
-                    <ContentImages
-                      content={{ images: [avatar] }}
-                      sx={styles.avatar}
-                      imageEffect='fadeInRotate'
-                    />
-                  </Box>
-                  <Box sx={{ 
-                    flex: [`100%`, 1], 
-                    ml: [0, 4] // No left margin on mobile
-                  }}>
-                    <Reveal effect='fadeInUp'>
-                      <ContentText content={text} />
-                      <Box sx={{ mt: 3 }}>
-                        {Array.from({ length: 5 }, (_, i) => (
-                          <Reveal
-                            key={`item-${i}`}
-                            effect='fadeInRotate'
-                            delay={0.2 * (i + 1)}
-                            css={css({ display: `inline-block` })}
-                          >
-                            <AiFillStar
-                              css={css({ color: `beta`, size: `icon.xs`, mr: 1 })}
-                            />
-                          </Reveal>
-                        ))}
-                      </Box>
-                    </Reveal>
-                  </Box>
-                </Flex>
-                <ImQuotesRight
-                  css={css({
-                    size: `30%`,
-                    color: `omegaLighter`,
-                    position: `absolute`,
-                    transform: `translate(0, -20%)`,
-                    bottom: 0,
-                    right: 0,
-                    opacity: 0.3 // Make quote mark more subtle
-                  })}
-                />
-              </ContentContainer>
-            ))}
-          </Tabs>
-        </Reveal>
-
-        {/* Navigation instruction hints */}
-        <Box sx={{ 
-          textAlign: 'center', 
-          mt: 3, 
-          display: ['block', 'none'],
-          opacity: 0.6,
-          fontSize: 0
-        }}>
-          <Box as="span" sx={{ color: 'omegaDark' }}>
-            Σύρετε αριστερά ή δεξιά για περισσότερες κριτικές
+      <Box sx={{ position: 'relative' }}>
+        {/* Left Arrow Button */}
+        {totalTabs > 1 && (
+          <Box
+            as="button"
+            onClick={() => navigateToTab('prev')}
+            sx={{
+              position: 'absolute',
+              left: ['-10px', '-40px'],
+              top: '50%',
+              transform: 'translateY(-50%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: ['40px', '48px'],
+              height: ['40px', '48px'],
+              bg: 'background',
+              border: 'none',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              zIndex: 10,
+              transition: 'all 0.3s ease',
+              boxShadow: 'card',
+              '&:hover': {
+                bg: 'omegaLighter',
+                transform: 'translateY(-50%) scale(1.1)',
+                boxShadow: 'cardHover'
+              },
+              '&:focus': {
+                outline: '2px solid',
+                outlineColor: 'beta',
+                outlineOffset: '2px'
+              }
+            }}
+            aria-label="Previous testimonial"
+          >
+            <FaChevronLeft size={20} />
           </Box>
-        </Box>
+        )}
 
-        <Box sx={{ 
-          textAlign: 'center', 
-          mt: 2, 
-          display: ['none', 'block'],
-          opacity: 0.6,
-          fontSize: 0
-        }}>
-          <Box as="span" sx={{ color: 'omegaDark' }}>
-            Χρησιμοποιήστε τα βελάκια ← → για πλοήγηση
+        {/* Right Arrow Button */}
+        {totalTabs > 1 && (
+          <Box
+            as="button"
+            onClick={() => navigateToTab('next')}
+            sx={{
+              position: 'absolute',
+              right: ['-10px', '-40px'],
+              top: '50%',
+              transform: 'translateY(-50%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: ['40px', '48px'],
+              height: ['40px', '48px'],
+              bg: 'background',
+              border: 'none',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              zIndex: 10,
+              transition: 'all 0.3s ease',
+              boxShadow: 'card',
+              '&:hover': {
+                bg: 'omegaLighter',
+                transform: 'translateY(-50%) scale(1.1)',
+                boxShadow: 'cardHover'
+              },
+              '&:focus': {
+                outline: '2px solid',
+                outlineColor: 'beta',
+                outlineOffset: '2px'
+              }
+            }}
+            aria-label="Next testimonial"
+          >
+            <FaChevronRight size={20} />
+          </Box>
+        )}
+
+        <Box 
+          ref={tabsRef}
+          tabIndex={0} // Make focusable for keyboard navigation
+          sx={{ 
+            maxWidth: '900px', 
+            mx: 'auto',
+            touchAction: 'pan-y pinch-zoom', // Allow vertical scrolling but handle horizontal swipes
+            userSelect: isDragging.current ? 'none' : 'auto', // Prevent text selection while swiping
+            outline: 'none', // Remove focus outline since we're not styling it
+            '&:focus-visible': {
+              outline: '2px solid',
+              outlineColor: 'beta',
+              outlineOffset: '2px'
+            }
+          }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          aria-label="Testimonials carousel - use arrow keys to navigate"
+        >
+          <Reveal effect='fadeInUp' delay={0.2}>
+            <Tabs variant='dots' position='bottom' space={3} autoplay>
+              {collection?.map(({ container, text, avatar }, index) => (
+                <ContentContainer
+                  content={container}
+                  variant='cards.paper'
+                  key={`item-${index}`}
+                  sx={{ position: `relative` }}
+                >
+                  <Flex
+                    sx={{
+                      alignItems: `center`,
+                      position: `relative`,
+                      flexWrap: `wrap`,
+                      zIndex: 1,
+                      flexDirection: ['column', 'row'], // Stack on mobile, side-by-side on desktop
+                      textAlign: ['center', 'left']
+                    }}
+                  >
+                    <Box sx={{ 
+                      width: [120, 150], // Smaller on mobile
+                      mb: [3, 0] // Margin bottom on mobile only
+                    }}>
+                      <ContentImages
+                        content={{ images: [avatar] }}
+                        sx={styles.avatar}
+                        imageEffect='fadeInRotate'
+                      />
+                    </Box>
+                    <Box sx={{ 
+                      flex: [`100%`, 1], 
+                      ml: [0, 4] // No left margin on mobile
+                    }}>
+                      <Reveal effect='fadeInUp'>
+                        <ContentText content={text} />
+                        <Box sx={{ mt: 3 }}>
+                          {Array.from({ length: 5 }, (_, i) => (
+                            <Reveal
+                              key={`item-${i}`}
+                              effect='fadeInRotate'
+                              delay={0.2 * (i + 1)}
+                              css={css({ display: `inline-block` })}
+                            >
+                              <AiFillStar
+                                css={css({ color: `beta`, size: `icon.xs`, mr: 1 })}
+                              />
+                            </Reveal>
+                          ))}
+                        </Box>
+                      </Reveal>
+                    </Box>
+                  </Flex>
+                  <ImQuotesRight
+                    css={css({
+                      size: `30%`,
+                      color: `omegaLighter`,
+                      position: `absolute`,
+                      transform: `translate(0, -20%)`,
+                      bottom: 0,
+                      right: 0,
+                      opacity: 0.3 // Make quote mark more subtle
+                    })}
+                  />
+                </ContentContainer>
+              ))}
+            </Tabs>
+          </Reveal>
+
+          {/* Navigation instruction hints */}
+          <Box sx={{ 
+            textAlign: 'center', 
+            mt: 3, 
+            display: ['block', 'none'],
+            opacity: 0.6,
+            fontSize: 0
+          }}>
+            <Box as="span" sx={{ color: 'omegaDark' }}>
+              Σύρετε αριστερά ή δεξιά για περισσότερες κριτικές
+            </Box>
+          </Box>
+
+          <Box sx={{ 
+            textAlign: 'center', 
+            mt: 2, 
+            display: ['none', 'block'],
+            opacity: 0.6,
+            fontSize: 0
+          }}>
+            <Box as="span" sx={{ color: 'omegaDark' }}>
+              Χρησιμοποιήστε τα βελάκια ← → για πλοήγηση
+            </Box>
           </Box>
         </Box>
       </Box>
