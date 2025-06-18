@@ -19,6 +19,16 @@ export const query = graphql`
           outputPixelDensities: [0.5, 1]
           quality: $imageQuality
         )
+        ImageSharp_horizontal: gatsbyImageData(
+          width: 800
+          height: 300
+          placeholder: BLURRED
+          transformOptions: { 
+              cropFocus: CENTER 
+              fit: INSIDE 
+              grayscale: false
+            }
+        )          
       }
       ... on ContentfulAsset {
         ContentfulAsset_vertical: gatsbyImageData(

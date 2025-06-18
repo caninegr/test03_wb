@@ -8,8 +8,10 @@ import getImageVariant from '@components/utils/getImageVariant'
 const styles = {
   regular: {
     minHeight: `23rem`,
+    maxHeight: '26rem',
     img: {
-      borderRadius: `lg`
+      borderRadius: `lg`,
+      //objectFit: 'contain' // Add this - shows full image
     }
   },
   wide: {
@@ -21,7 +23,8 @@ const styles = {
     mt: -4,
     mx: -4,
     img: {
-      borderRadius: t => `${t.radii.lg} ${t.radii.lg} 0 0`
+      borderRadius: t => `${t.radii.lg} ${t.radii.lg} 0 0`,
+      //objectFit: 'contain' // Add this too
     }
   },
   inCardLarge: {
@@ -44,7 +47,8 @@ export const PostImage = ({
   if (!thumbnail) return null
 
   const variant = (wide && 'wide') || (full && 'full') || 'regular'
-  const image = getImageVariant(thumbnail, 'hero')
+  const image = getImageVariant(thumbnail, 'horizontal')
+  //console.log('Available image variants:', Object.keys(thumbnail))
 
   return (
     <>
