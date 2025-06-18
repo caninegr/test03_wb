@@ -54,7 +54,7 @@ const FooterBlock01 = ({ content: { images, collection } }) => {
               </GLink>
             </Box>
             <Box pt='2' mb={[2, 4]}>
-              © {new Date().getFullYear()} Cane Sentio, <br />Με επιφύλαξη παντός δικαιώματος.
+              © {new Date().getFullYear()}, All Rights Reserved.
             </Box>
             {/* <Box>
               <PoweredByGatsby />

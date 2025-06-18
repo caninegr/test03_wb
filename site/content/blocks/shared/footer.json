@@ -41,9 +41,9 @@
       ],
       "buttons": [
         {
-          "text": "Privacy Notice",
+          "text": "Πολιτική Απορρήτου",
           "type": "PAGE",
-          "link": "",
+          "link": "/privacy",
           "variant": "links.nav-light"
         },
         {
@@ -53,9 +53,9 @@
           "variant": "links.nav-light"
         },
         {
-          "text": "Terms Of Use",
+          "text": "Όροι Χρήσης",
           "type": "PAGE",
-          "link": "",
+          "link": "/termsofuse",
           "variant": "links.nav-light"
         }
       ]

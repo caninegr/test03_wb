@@ -122,9 +122,15 @@ export default {
   },  
   whyChooseUsContainer: {
     bg: `omegaDarker`,
-    borderRadius: `xl`,
+    borderRadius: [0, 0, `xl`], // Responsive: mobile → tablet → desktop
     py: 5,
     px: [4, 0]
-  }
+  }  
+  // whyChooseUsContainer: {
+  //   bg: `omegaDarker`,
+  //   borderRadius: `xl`,
+  //   py: 5,
+  //   px: [4, 0]
+  // }
   
 }

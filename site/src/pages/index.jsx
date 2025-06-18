@@ -15,7 +15,7 @@ import Companies from '@solid-ui-blocks/Companies/Block01'
 
 // +
 import OurServices from '@solid-ui-blocks/Features/Block08'
-import Testimonials from '@solid-ui-blocks/Testimonials/Block01'
+import Testimonials from '@solid-ui-blocks/Testimonials/Block03'
 //import Content from '@solid-ui-blocks/Content/Block01'
 
 import FeatureOne from '@solid-ui-blocks/FeaturesWithPhoto/Block07'
@@ -69,7 +69,7 @@ const IndexPage = props => {
       <Container variant='wide' sx={styles.featureOneContainer}>
         <FeatureOne content={content['feature-one']} />
       </Container>
-      <Divider space='5' />
+      <Divider space='1' />
 
       {/* <Divider space='5' />
       <Container variant='wide' sx={styles.contentTwoContainer}>
@@ -81,17 +81,17 @@ const IndexPage = props => {
       <Container variant='wide' sx={styles.whyChooseUsContainer}>
         <WhyChooseUs content={content['why-choose-us']} />
       </Container>
-      <Divider space='5' />
+      <Divider space='4' />
 
-      <Divider space='5' />
+      <Divider space='4' />
         <Testimonials content={content['testimonials']} />
-      <Divider space='5' />
+      <Divider space='4' />
 
-      <Divider space='5' />
+      <Divider space='4' />
         <WithRecentPosts>
           <Blog content={content['latest-blogs']} />
         </WithRecentPosts>
-      <Divider space='5' />
+      <Divider space='4' />
       <Footer content={content['footer']} />
       <CookieBanner />
     </Layout>
