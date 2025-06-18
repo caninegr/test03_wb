@@ -189,19 +189,19 @@ const TestimonialsBlock03 = ({
               transition: 'all 0.3s ease',
               boxShadow: 'card',
               '&:hover': {
-                bg: 'omegaLighter',
+                bg: 'betaLighter',
                 transform: 'translateY(-50%) scale(1.1)',
                 boxShadow: 'cardHover'
               },
               '&:focus': {
-                outline: '2px solid',
+                outline: '0px solid',
                 outlineColor: 'beta',
                 outlineOffset: '2px'
               }
             }}
             aria-label="Previous testimonial"
           >
-            <FaChevronLeft size={20} />
+            <FaChevronLeft size={20} color="#ea580c" />
           </Box>
         )}
 
@@ -228,19 +228,19 @@ const TestimonialsBlock03 = ({
               transition: 'all 0.3s ease',
               boxShadow: 'card',
               '&:hover': {
-                bg: 'omegaLighter',
+                bg: 'betaLighter',
                 transform: 'translateY(-50%) scale(1.1)',
                 boxShadow: 'cardHover'
               },
               '&:focus': {
-                outline: '2px solid',
+                outline: '0px solid',
                 outlineColor: 'beta',
                 outlineOffset: '2px'
               }
             }}
             aria-label="Next testimonial"
           >
-            <FaChevronRight size={20} />
+            <FaChevronRight size={20} color="#ea580c" />
           </Box>
         )}
 
