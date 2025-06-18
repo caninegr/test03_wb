@@ -75,9 +75,9 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
     //training: '#ed8936', // Orange  
     //boarding: '#3182ce', // Blue
     //rehab: '#7d9951'     // Green
-    training: 'betaDark', // Orange  
-    boarding: 'gammaDark', // Blue
-    rehab: 'alphaDark'     // Green    
+    training: 'betaDarker', // Orange  
+    boarding: 'gammaDarker', // Blue
+    rehab: 'alphaDarker'     // Green    
   };
 
   const [activeTab, setActiveTab] = useState('home');
