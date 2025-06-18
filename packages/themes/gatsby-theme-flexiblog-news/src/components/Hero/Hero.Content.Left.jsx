@@ -15,8 +15,8 @@ const styles = {
 
 export default () => (
   <Heading variant='h1' sx={styles.heading}>
-    Get Inspired to Achieve
+    Μια αγκαλιά,  
     <br />
-    <span>Enhanced Outcomes.</span>
+    <span>μια ζωή παρέα.</span>
   </Heading>
 )

@@ -52,19 +52,18 @@ const BannerWide = () => {
       <HeroWide.Wrapper sx={styles.wrapper}>
         <HeroWide.LeftColumn>
           <Heading variant='h1' sx={styles.heading}>
-            Get Inspired to Achieve
+            Μια αγκαλιά, 
             <br />
-            <span>Enhanced Outcomes.</span>
+            <span>μια ζωή παρέα.</span>
           </Heading>
         </HeroWide.LeftColumn>
         <HeroWide.RightColumn sx={styles.rightColumn}>
           <Box sx={styles.quoteWrapper}>
             <Heading variant='h3' sx={styles.quote}>
-              “While one person hesitates because he feels inferior, the other
-              is busy making mistakes and becoming superior.”
+              “Δώσε ένα χάδι στον σκύλο και μόλις βρήκες μόνιμη απασχόληση.”
             </Heading>
             <Heading variant='h4' sx={styles.quoteAuthor}>
-              Henry C. Link
+              Franklin P. Jones
             </Heading>
           </Box>
         </HeroWide.RightColumn>

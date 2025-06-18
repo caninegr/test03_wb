@@ -26,11 +26,10 @@ const styles = {
 export default () => (
   <Box sx={styles.box}>
     <Heading variant='h3' sx={styles.quote}>
-      “While one person hesitates because he feels inferior, the other is busy
-      making mistakes and becoming superior.”
+      “Δώσε ένα χάδι στον σκύλο και μόλις βρήκες μόνιμη απασχόληση.”
     </Heading>
     <Heading variant='h4' sx={styles.writer}>
-      Henry C. Link
+      Franklin P. Jones
     </Heading>
   </Box>
 )
