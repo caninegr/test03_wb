@@ -6,15 +6,24 @@ import ContentButtons from '@solid-ui-components/ContentButtons'
 import WithDefaultContent from '@solid-ui-blocks/WithDefaultContent'
 import { ImHome } from 'react-icons/im'
 
+// In your TopNavbar component, update the styles object:
+
 const styles = {
   wrapper: {
     position: `relative`,
     zIndex: 20,
+    
+    // ADD: Desktop margin fix
+    '@media screen and (min-width: 1024px)': {
+      '.topnav-container, .topnav-container > *, .topnav-flex, .topnav-flex > *, .topnav-flex > * > *': {
+        marginBottom: '0px !important'
+      }
+    },
+    
     '.topnav-container': {
       bg: `#1a202c`,
       position: `relative`,
       borderBottom: 'none',
-      // Fix: Ensure consistent margins across all breakpoints
       marginBottom: 0,
       paddingBottom: 0,
       '.button-group-link': {
@@ -31,11 +40,9 @@ const styles = {
     justifyContent: `space-between`,
     alignItems: `center`,
     fontSize: 1,
-    // FIX: Keep consistent layout across all breakpoints - no column layout
-    flexDirection: 'row', // Changed from ['column', 'row', 'row']
-    // FIX: Remove margin that causes shifts
+    flexDirection: 'row',
     '& > *:first-of-type': {
-      mb: 0 // Changed from [2, 0, 0]
+      mb: 0
     },
     '.button-group-link': {
       fontSize: [2, null, 2]
@@ -45,7 +52,6 @@ const styles = {
       height: ['14px', null, '16px'],
       mr: [1, null, 2]
     },
-    // Ensure mobile styles don't add margins
     marginBottom: 0,
     paddingBottom: 0
   }
