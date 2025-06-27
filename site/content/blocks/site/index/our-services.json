@@ -24,32 +24,6 @@
     {
       "images": [
         {
-          "src": "../../../assets/flexiblocks/images/services/training.jpg",
-          "alt": "Training service"
-        }
-      ],
-      "text": [
-        {
-          "text": "Εκπαίδευση Σκύλων",
-          "color": "omegaDarker",
-          "variant": "h4"
-        },
-        {
-          "text": "Σχέδιο, επιστήμη & επιτυχία, χωρίς βία."
-        }
-      ],
-      "buttons": [
-        {
-          "text": "Καθοδήγησε →",
-          "type": "PAGE",
-          "link": "/training",
-          "variant": "secondary"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
           "src": "../../../assets/flexiblocks/images/services/boarding.jpg",
           "alt": "Boarding service"
         }
@@ -73,6 +47,32 @@
         }
       ]
     },
+    {
+      "images": [
+        {
+          "src": "../../../assets/flexiblocks/images/services/training.jpg",
+          "alt": "Training service"
+        }
+      ],
+      "text": [
+        {
+          "text": "Εκπαίδευση Σκύλων",
+          "color": "omegaDarker",
+          "variant": "h4"
+        },
+        {
+          "text": "Σχέδιο, επιστήμη & επιτυχία, χωρίς βία."
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Καθοδήγησε →",
+          "type": "PAGE",
+          "link": "/training",
+          "variant": "secondary"
+        }
+      ]
+    },    
     {
       "images": [
         {

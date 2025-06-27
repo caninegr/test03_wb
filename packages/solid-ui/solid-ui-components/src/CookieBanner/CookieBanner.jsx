@@ -173,7 +173,7 @@ const CookieBanner = ({ forceShow = false }) => {
                 Συνεχίζοντας την περιήγηση συμφωνείτε με την χρήση τους.{' '}
                 <Text
                   as="a"
-                  href="/privacy-policy"
+                  href="/privacy"
                   sx={{
                     color: 'alpha',
                     textDecoration: 'underline',
