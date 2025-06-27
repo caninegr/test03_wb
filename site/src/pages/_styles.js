@@ -5,11 +5,22 @@
  *
  */
 
-
 //import holographic from './assets/holographic.svg'
 import holographic from './assets/holographic.webp?url'
 
 export default {
+  // Add the missing topNavbarContainer styles
+  topNavbarContainer: {
+    position: 'relative',
+    zIndex: 20,
+    width: '100%',
+    // Ensure it takes up space to prevent layout shift
+    minHeight: ['44px', '46px', '47px'], // Match your TopNavbar heights
+    '@media screen and (max-width: 768px)': {
+      marginBottom: 0
+    }
+  },
+  
   heroContainer: {
     position: `relative`,
     py: [3],
@@ -126,11 +137,4 @@ export default {
     py: 5,
     px: [4, 0]
   }  
-  // whyChooseUsContainer: {
-  //   bg: `omegaDarker`,
-  //   borderRadius: `xl`,
-  //   py: 5,
-  //   px: [4, 0]
-  // }
-  
 }

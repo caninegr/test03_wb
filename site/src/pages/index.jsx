@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Container } from 'theme-ui'
+import { Container, Box } from 'theme-ui'
 import Layout from '@solid-ui-layout/Layout'
 import Seo from '@solid-ui-components/Seo'
 import Divider from '@solid-ui-components/Divider'
@@ -41,16 +41,17 @@ const IndexPage = props => {
 
   return (
     <Layout theme={theme} {...props}>
-
       <Seo title='Home' />
       {/* Modals */}
       <ModalWithTabs content={content['authentication']} reverse />
       <ModalWithTabs content={content['contact']} />
       <ModalSimple content={content['advertisement']} />
-      {/* Blocks */}
-
-      {/* + */}
+      
+      {/* Navigation */}
       <TopNavbar sx={styles.topNavbarContainer} content={content['top-navbar']} />
+      
+
+      
       <Header content={content['header']} /> 
 
       <Divider space='4' />
