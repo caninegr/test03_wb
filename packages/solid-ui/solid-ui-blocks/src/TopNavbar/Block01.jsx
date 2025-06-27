@@ -1,4 +1,4 @@
-// TopNavbar.jsx
+// TopNavbar.jsx - Fixed version for mobile gaps
 import React, { useState, useEffect } from 'react'
 import { Container, Box, Flex, css } from 'theme-ui'
 import Reveal from '@solid-ui-components/Reveal'
@@ -14,6 +14,9 @@ const styles = {
       bg: `#1a202c`,
       position: `relative`,
       borderBottom: 'none',
+      // Fix: Ensure consistent margins across all breakpoints
+      marginBottom: 0,
+      paddingBottom: 0,
       '.button-group-link': {
         color: '#ffffff',
         fontWeight: 'medium'
@@ -21,11 +24,6 @@ const styles = {
       '.active .button-group-link': {
         color: '#000000',
         fontWeight: 'bold'
-      },
-      '@media screen and (max-width: 768px)': {
-        '& > div': {
-          marginBottom: 0
-        }
       }
     }
   },
@@ -33,9 +31,11 @@ const styles = {
     justifyContent: `space-between`,
     alignItems: `center`,
     fontSize: 1,
-    flexDirection: ['column', 'row', 'row'],
+    // FIX: Keep consistent layout across all breakpoints - no column layout
+    flexDirection: 'row', // Changed from ['column', 'row', 'row']
+    // FIX: Remove margin that causes shifts
     '& > *:first-of-type': {
-      mb: [2, 0, 0]
+      mb: 0 // Changed from [2, 0, 0]
     },
     '.button-group-link': {
       fontSize: [2, null, 2]
@@ -45,39 +45,22 @@ const styles = {
       height: ['14px', null, '16px'],
       mr: [1, null, 2]
     },
-    '@media screen and (max-width: 768px)': {
-      marginBottom: 0
-    }
+    // Ensure mobile styles don't add margins
+    marginBottom: 0,
+    paddingBottom: 0
   }
 }
 
-const smallScreenFix = `
-  @media screen and (max-width: 768px) {
-    .topnav-container > div {
-      margin-bottom: 0 !important;
-    }
-    .topnav-flex {
-      margin-bottom: 0 !important;
-    }
-    .topnav-flex > div {
-      margin-bottom: 0 !important;
-    }
-    .button-group-button {
-      margin-bottom: 0 !important;
-    }
-  }
-`;
+// Remove the problematic client-side CSS injection completely
+// const smallScreenFix = `...` // DELETE THIS
 
 const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
   // Tab background colors
   const tabColors = {
-    home: '#718096',     // Light gray
-    //training: '#ed8936', // Orange  
-    //boarding: '#3182ce', // Blue
-    //rehab: '#7d9951'     // Green
-    training: 'betaDarker', // Orange  
-    boarding: 'gammaDarker', // Blue
-    rehab: 'alphaDarker'     // Green    
+    home: '#718096',
+    training: 'betaDarker',
+    boarding: 'gammaDarker', 
+    rehab: 'alphaDarker'
   };
 
   const [activeTab, setActiveTab] = useState('home');
@@ -96,22 +79,14 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
         } else if (pathname.includes('rehab')) {
           setActiveTab('rehab');
         } else {
-          setActiveTab('home'); // fallback
+          setActiveTab('home');
         }
       };
 
       determineActiveTab();
       
-      // Add CSS
-      const styleEl = document.createElement('style');
-      styleEl.innerHTML = smallScreenFix;
-      document.head.appendChild(styleEl);
-
-      return () => {
-        if (document.head.contains(styleEl)) {
-          document.head.removeChild(styleEl);
-        }
-      };
+      // REMOVE ALL CSS INJECTION - this was causing hydration mismatches
+      // No more document.createElement('style') or appendChild
     }
   }, []);
 
@@ -121,7 +96,6 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
     }
   };
 
-  // Get buttons from collection
   const buttons = collection && collection[0] && collection[0].buttons ? collection[0].buttons : [];
 
   return (
@@ -134,65 +108,56 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                 width: '100%',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                // FIX: Consistent padding across all breakpoints
                 pt: 2,
                 pb: 0,
-                mb: [0, null, null],
-                '@media screen and (max-width: 768px)': {
-                  marginBottom: 0
-                }
+                mb: 0, // Force margin-bottom to 0
+                // Remove mobile-specific overrides that cause hydration issues
+                marginBottom: 0,
+                paddingBottom: 0
               }}
             >
               {/* Home Tab */}
               <Box
                 onClick={handleHomeClick}
                 sx={{
-                  // Basic layout
-                  width: ['35px', '42px', '48px'], // Updated to match your version
+                  width: ['35px', '42px', '48px'],
                   minWidth: ['35px', '42px', '48px'],
-                  maxWidth: ['35px', '42px', '48px'], // Force max width
+                  maxWidth: ['35px', '42px', '48px'],
                   textAlign: 'center',
                   cursor: 'pointer',
                   
-                  // Styling with !important overrides
-                  bg: activeTab === 'home' ? 'white !important' : '#ed8936 !important', // Orange color to match training tab
+                  bg: activeTab === 'home' ? 'white' : '#ed8936',
                   borderTopLeftRadius: '4px',
                   borderTopRightRadius: '4px',
                   borderBottomLeftRadius: '0',
                   borderBottomRightRadius: '0',
                   
-                  // Spacing
                   py: 2,
                   px: [1, 1, 2],
                   mx: ['0.04rem', '0.06rem', '0.08rem'],
                   
-                  // Height and alignment - force consistency
-                  minHeight: ['36px !important', '38px !important', '39px !important'],
+                  // FIX: Consistent heights to prevent layout shifts
+                  minHeight: ['36px', '38px', '39px'],
                   maxHeight: ['36px', '38px', '39px'],
                   height: ['36px', '38px', '39px'],
-                  display: 'flex !important',
-                  alignItems: 'center !important',
-                  justifyContent: 'center !important',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   
-                  // Active state
                   ...(activeTab === 'home' ? {
                     borderBottom: '1px dashed #000000',
                     paddingBottom: '6px',
                     boxShadow: '0 -2px 5px rgba(0,0,0,0.1)'
                   } : {}),
                   
-                  // Override any potential interference
-                  fontSize: 'inherit !important',
-                  fontFamily: 'inherit !important',
-                  lineHeight: 'normal !important',
-                  
                   '&:hover': {
                     opacity: 0.8
                   },
 
-                  // Force overrides for any page-specific CSS
-                  '&, & > *': {
-                    boxSizing: 'border-box !important'
-                  }
+                  boxSizing: 'border-box',
+                  // Remove any potential margins
+                  margin: ['0.04rem', '0.06rem', '0.08rem']
                 }}
                 className={activeTab === 'home' ? 'active' : ''}
               >
@@ -200,15 +165,15 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                   size={20}
                   color={activeTab === 'home' ? '#000000' : '#ffffff'}
                   style={{
-                    width: '20px !important', // Updated to match size prop
-                    height: '20px !important',
-                    fontSize: '20px !important',
-                    minWidth: '20px !important',
-                    minHeight: '20px !important',
-                    maxWidth: '20px !important',
-                    maxHeight: '20px !important',
-                    flexShrink: '0 !important',
-                    display: 'block !important',
+                    width: '20px',
+                    height: '20px',
+                    fontSize: '20px',
+                    minWidth: '20px',
+                    minHeight: '20px',
+                    maxWidth: '20px',
+                    maxHeight: '20px',
+                    flexShrink: '0',
+                    display: 'block',
                     fontWeight: 'bold'
                   }}
                 />
