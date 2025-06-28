@@ -3,27 +3,27 @@
     {
       "text": [
         {
-          "text": "Questions"
+          "text": "Ερωτήσεις"
         },
         {
-          "text": "Get in Touch",
+          "text": "Γράψε μας",
           "color": "omegaDarker",
           "variant": "h2",
           "space": 3
         },
         {
-          "text": "Any questions or remarks?",
+          "text": "Θες φιλοξενία, εκπαίδευση ή απλές πληροφορίες;",
           "color": "omegaDark"
         },
         {
-          "text": "We'll get back you within 24 hours.",
+          "text": "Συνήθως απαντούμε σε 2 ώρες!",
           "color": "omega"
         }
       ],
       "images": [
         {
-          "src": "../../assets/flexiblocks/shared/contact.jpg",
-          "alt": "alt text"
+          "src": "../../assets/flexiblocks/shared/contact.png",
+          "alt": "Belgian malinois dog staring at the telephone"
         }
       ],
       "form": {
@@ -32,7 +32,7 @@
             "identifier": "name",
             "type": "TEXT",
             "placeholder": {
-              "text": "Full Name"
+              "text": "Ονοματεπώνυμο"
             },
             "icon": {
               "src": "../../assets/flexiblocks/icons/bx-user.svg",
@@ -43,7 +43,7 @@
             "identifier": "email",
             "type": "EMAIL",
             "placeholder": {
-              "text": "Email Address"
+              "text": "Email"
             },
             "icon": {
               "src": "../../assets/flexiblocks/icons/bx-envelope.svg",
@@ -54,7 +54,7 @@
             "identifier": "subject",
             "type": "TEXT",
             "placeholder": {
-              "text": "Subject"
+              "text": "Θέμα"
             },
             "icon": {
               "src": "../../assets/flexiblocks/icons/bx-comment-detail.svg",
@@ -65,7 +65,7 @@
             "identifier": "message",
             "type": "TEXTAREA",
             "placeholder": {
-              "text": "Enter your message"
+              "text": "Το μήνυμα σου"
             }
           },
           {
@@ -76,7 +76,7 @@
         ],
         "buttons": [
           {
-            "text": "Send Message",
+            "text": "Αποστολή",
             "type": "SUBMIT",
             "variant": "secondary",
             "width": "200px"
@@ -87,33 +87,33 @@
     {
       "text": [
         {
-          "text": "Information"
+          "text": "Τοποθεσία"
         },
         {
-          "text": "Contact Details",
+          "text": "Πληροφορίες",
           "color": "omegaDarker",
           "variant": "h2",
           "space": 3
         },
         {
-          "text": "Have some feedback for us?",
+          "text": "Επικοινώνησε μαζί μας  ",
           "color": "omegaDark"
         },
         {
-          "text": "Give us a call or send an email.",
+          "text": "*επισκέψεις αποκλειστικά με ραντεβού",
           "color": "omega"
         }
       ],
       "map": {
-        "lat": 37.773972,
-        "lng": -122.431297,
+        "lat": 40.769679, 
+        "lng": 23.001138,
         "zoom": 12
       },
       "collection": [
         {
           "text": [
             {
-              "text": "+123 (4567) 8910",
+              "text": "+30 6983912430",
               "color": "omegaDarker",
               "variant": "h6"
             }
@@ -127,7 +127,7 @@
         {
           "text": [
             {
-              "text": "hello@example.com",
+              "text": "info@cane.gr",
               "color": "omegaDarker",
               "variant": "h6"
             }
@@ -141,7 +141,7 @@
         {
           "text": [
             {
-              "text": "120 Street Lorem Ipsum Sit Amet",
+              "text": "Δρυμός, Θεσσαλονίκη",
               "color": "omegaDarker",
               "variant": "h6"
             }
