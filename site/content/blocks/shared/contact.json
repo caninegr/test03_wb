@@ -113,7 +113,7 @@
         {
           "text": [
             {
-              "text": "+30 6983912430",
+              "text": "+30 2311115099",
               "color": "omegaDarker",
               "variant": "h6"
             }
@@ -124,6 +124,20 @@
             "bg": "transaprent"
           }
         },
+        {
+          "text": [
+            {
+              "text": "+30 6983912430",
+              "color": "omegaDarker",
+              "variant": "h6"
+            }
+          ],
+          "icon": {
+            "src": "../../assets/flexiblocks/icons/bx-mobile-alt.svg",
+            "color": "alpha",
+            "bg": "transaprent"
+          }
+        },        
         {
           "text": [
             {
@@ -151,7 +165,35 @@
             "color": "alpha",
             "bg": "transaprent"
           }
-        }
+        },
+        {
+          "text": [
+            {
+              "text": "Ωράριο",
+              "color": "omegaDarker",
+              "variant": "h6"
+            }
+          ],
+          "icon": {
+            "src": "../../assets/flexiblocks/icons/bx-time-alt.svg",
+            "color": "alpha",
+            "bg": "transaprent"
+          }
+        },
+        {
+          "text": [
+            {
+              "text": "Δ Τ Τ Π Π Σ Κ / 10:00 - 19:00",
+              "color": "omegaDarker",
+              "variant": "h6"
+            }
+          ],
+          "icon": {
+            "src": "../../assets/flexiblocks/icons/cs-transparent.svg",
+            "color": "alpha",
+            "bg": "transaprent"
+          }
+        }                        
       ]
     }
   ]

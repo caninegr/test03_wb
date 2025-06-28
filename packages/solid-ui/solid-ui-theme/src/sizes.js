@@ -1,5 +1,6 @@
 export default {
   icon: {
+    xxs: 12,
     xs: 24,
     sm: 32,
     md: 48,

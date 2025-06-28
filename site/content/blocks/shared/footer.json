@@ -101,6 +101,34 @@
           }
         }
       ]
+    },
+    {
+      "text": [
+        {
+          "text": "Πληροφορίες"
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Δρυμός, Θεσσαλονίκη",
+          "type": "PAGE",
+          "link": "https://maps.app.goo.gl/zYsHP9Ksg2psrjoU7",
+          "target": "_blank",
+          "variant": "links.nav-light"
+        },
+        {
+          "text": "+30 2311115099",
+          "type": "PAGE", 
+          "link": "tel:+306983912430",
+          "variant": "links.nav-light"
+        },
+        {
+          "text": "info@cane.gr",
+          "type": "PAGE",
+          "link": "mailto:info@cane.gr",
+          "variant": "links.nav-light"
+        }
+      ]
     }
   ]
 }
