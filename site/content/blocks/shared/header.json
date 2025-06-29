@@ -24,7 +24,7 @@
                     {
                       "text": "Services",
                       "type": "PAGE",
-                      "link": "/services/",
+                      "link": "/boarding/",
                       "variant": "links.nav-dark",
                       "icon": {
                         "src": "../../assets/flexiblocks/icons/bxs-window-alt.svg",

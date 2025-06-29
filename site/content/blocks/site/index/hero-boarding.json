@@ -1,0 +1,37 @@
+{
+  "text": [
+    {
+      "text": "Ξενοδοχείο Σκύλων στη Θεσσαλονίκη",
+      "color": "white",
+      "variant": "h1",
+      "text-shadow": "-1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red"
+    },    
+    {
+      "text": "Έχουμε δημιουργήσει έναν όμορφο χώρο, συνδυάζοντας ασφάλεια, διασκέδαση και λειτουργικότητα.",
+      "color": "white",
+      "variant": "medium"
+    }  
+  ],
+  "images": [
+    {
+      "src": "../../../assets/flexiblocks/homepage/cane/hero_larger_stroke.png",
+      "alt": "alt text"
+    }
+  ],
+  
+    "buttons": [
+      {
+        "text": "Επικοινώνησε",
+        "type": "MODAL",
+        "link": "contact",
+        "variant": "secondary"
+      },
+      {
+        "text": "Δες το βίντεο",
+        "type": "VIDEO",
+        "link": "https://www.youtube.com/embed/j_vPnlU1R7w?autoplay=1&cc_load_policy=1&modestbranding=1&showinfo=0&rel=0",
+        "variant": "white"
+      }
+    ]
+  
+}

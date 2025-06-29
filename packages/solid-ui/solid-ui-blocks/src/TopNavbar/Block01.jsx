@@ -244,7 +244,7 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                   justifyContent: 'center'
                 }}
               >
-                <ContentButtons content={buttons.length > 1 ? [buttons[1]] : [{ text: "Boarding", type: "PAGE", link: "/services/", variant: "links.nav-light" }]} />
+                <ContentButtons content={buttons.length > 1 ? [buttons[1]] : [{ text: "Boarding", type: "PAGE", link: "/boarding/", variant: "links.nav-light" }]} />
               </Box>
 
               {/* Rehab Tab */}

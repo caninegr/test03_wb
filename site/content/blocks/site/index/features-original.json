@@ -1,12 +1,12 @@
 {
   "text": [
     {
-      "text": "Υπακοή ή Συνεργασία;",
+      "text": "Choose Your Platform",
       "color": "beta",
       "variant": "h4"
     },
     {
-      "text": "Μαθήματα Εκπαίδευσης Σκύλου",
+      "text": "Available on All Platforms",
       "variant": "h2"
     }
   ],
@@ -18,25 +18,25 @@
     {
       "text": [
         {
-          "text": "Εκπαίδευση στη Θεσσαλονίκη",
+          "text": "Mobile App for Android",
           "color": "alpha",
           "variant": "h4"
         },
         {
-          "text": "Στον δικό σου ρυθμό, στο δικό μας χώρο. Έλα να εκπαιδευτείς μαζί με τον σκύλο σου, σε ειδικά διαμορφωμένο χώρο. Στα διαλείμματα θα χαρείτε το πάρκο εκτόνωσης & κοινωνικοποίησης!"
+          "text": "As an Internet marketing strategy, SEO considers how search engines work, the computer-programmed algorithms that dictate seo behavior."
         }
       ],
       "collection": [
         {
           "text": [
             {
-              "text": "Θετική Εκπαίδευση",
+              "text": "Content optimization",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -44,13 +44,13 @@
         {
           "text": [
             {
-              "text": "Επιπλέον Δραστηριότητες",
+              "text": "Strategy & planning",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -58,13 +58,13 @@
         {
           "text": [
             {
-              "text": "Ιδιαίτερα Μαθήματα",
+              "text": "Monthly reports",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -82,25 +82,25 @@
     {
       "text": [
         {
-          "text": "Διαδικτυακά Μαθήματα στο Σπίτι",
+          "text": "Cloud Based Software",
           "color": "alpha",
           "variant": "h4"
         },
         {
-          "text": "Αν η απόσταση ή ο χρόνος είναι πρόβλημα, υπάρχει λύση. Προσφέρουμε online μαθήματα από την άνεση του σπιτιού σου. Βάλε το κινητό σου, πάρε λιχουδιές και είμαστε έτοιμοι!"
+          "text": "Social media marketing is the use of social media platforms and websites to promote a product or service and is becoming more popular."
         }
       ],
       "collection": [
         {
           "text": [
             {
-              "text": "Οικείο Περιβάλλον",
+              "text": "Creating engaging content",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -108,13 +108,13 @@
         {
           "text": [
             {
-              "text": "Οικονομικές Τιμές",
+              "text": "Trend research",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -122,13 +122,13 @@
         {
           "text": [
             {
-              "text": "Εξοικονόμηση Χρόνου",
+              "text": "Evaluation and feedback",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -147,25 +147,25 @@
     {
       "text": [
         {
-          "text": "Ομαδικά Σεμινάρια",
+          "text": "Mobile App for iPhone",
           "color": "alpha",
           "variant": "h4"
         },
         {
-          "text": "Αν σου αρέσουν οι ομαδικές συνεδρίες περισσότερο από τα ιδιαίτερα μαθήματα, τότε μείνε συντονισμένος για τα σεμινάρια μας. Προσπαθούμε να έχουμε κάτι ξεχωριστό, κάθε μήνα!"
+          "text": "Content marketing is a form of marketing focused on creating, publishing, and distributing content for a targeted audience online."
         }
       ],
       "collection": [
         {
           "text": [
             {
-              "text": "Περισσότερο Υλικό",
+              "text": "Unique content creation",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -173,13 +173,13 @@
         {
           "text": [
             {
-              "text": "Χαμηλό Κόστος",
+              "text": "SEO optimized articles",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }
@@ -187,13 +187,13 @@
         {
           "text": [
             {
-              "text": "Ομαδικό Πνεύμα",
+              "text": "Fast turnaround",
               "color": "omegaDark",
               "variant": "h6"
             }
           ],
           "icon": {
-            "src": "../../../assets/flexiblocks/icons/fi-paw.svg",
+            "src": "../../../assets/flexiblocks/icons/bx-radio-circle-marked.svg",
             "alt": "alt text",
             "color": "beta"
           }

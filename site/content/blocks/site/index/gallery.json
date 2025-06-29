@@ -1,0 +1,12 @@
+{
+  "text": [
+    { "text": "Our Dog Boarding Facility", "variant": "h2" },
+    { "text": "Take a look at our comfortable and fun environment", "variant": "medium" }
+  ],
+  "images": [
+    { "src": "../../../assets/flexiblocks/gallery/boarding/image1.jpg", "alt": "Indoor play area" },
+    { "src": "../../../assets/flexiblocks/gallery/boarding/image2.jpg", "alt": "Indoor play area" },
+    { "src": "../../../assets/flexiblocks/gallery/boarding/image3.jpg", "alt": "Indoor play area" },
+    { "src": "../../../assets/flexiblocks/gallery/boarding/image4.jpg", "alt": "Indoor play area" }
+  ]
+}

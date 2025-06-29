@@ -1,0 +1,29 @@
+{
+  "text": [
+    {
+      "text": "Ορατότητα στα καθημερινά δρώμενα",
+      "color": "alpha",
+      "variant": "h4"
+    },
+    {
+      "text": "Ενδιαφέρον & Ηρεμία",
+      "color": "omegaDarker",
+      "variant": "h2"
+    },
+    {
+      "text": "Φροντίσαμε κάθε δωμάτιο να έχει θέα στο κτήμα μας, χωρίς όμως να μπορούν να έρθουν σε επαφή οι διπλανοί σκύλοι.",
+      "color": "omegaDark",
+      "variant": "medium"
+    }
+  ],
+  "images": [
+    {
+      "src": "../../../assets/flexiblocks/homepage/cane/screenshot-2.jpg",
+      "alt": "alt text",
+      "radius": "lg",
+      "shadow": "default",
+      "border": "lg",
+      "effects": ["fadeInDown"]
+    }
+  ]
+}

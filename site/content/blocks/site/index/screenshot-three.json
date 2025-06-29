@@ -1,0 +1,29 @@
+{
+  "text": [
+    {
+      "text": "Φυσική σκιά και αεράκι",
+      "color": "beta",
+      "variant": "h4"
+    },
+    {
+      "text": "Δροσερό Καλοκαίρι",
+      "color": "omegaDarker",
+      "variant": "h2"
+    },
+    {
+      "text": "Τέλος, τα τοποθετήσαμε κάτω από την σκιά πολλών δέντρων.",
+      "color": "omegaDark",
+      "variant": "medium"
+    }
+  ],
+  "images": [
+    {
+      "src": "../../../assets/flexiblocks/homepage/cane/screenshot-3.jpg",
+      "alt": "alt text",
+      "radius": "lg",
+      "shadow": "default",
+      "border": "lg",
+      "effects": ["fadeInDown"]
+    }
+  ]
+}

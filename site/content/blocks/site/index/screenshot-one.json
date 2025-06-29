@@ -1,0 +1,29 @@
+{
+  "text": [
+    {
+      "text": "Κάθε σκύλος έχει τον δικό του χώρο",
+      "color": "beta",
+      "variant": "h4"
+    },
+    {
+      "text": "Ασφαλή Δωμάτια",
+      "color": "omegaDarker",
+      "variant": "h2"
+    },
+    {
+      "text": "Πρώτα σχεδιάσαμε έναν απλό και καθαρό χώρο. Έπειτα χτίσαμε μια στιβαρή κατασκευή.",
+      "color": "omegaDark",
+      "variant": "medium"
+    }
+  ],
+  "images": [
+    {
+      "src": "../../../assets/flexiblocks/homepage/cane/screenshot-1.jpg",
+      "alt": "alt text",
+      "radius": "lg",
+      "shadow": "default",
+      "border": "lg",
+      "effects": ["fadeInDown"]
+    }
+  ]
+}

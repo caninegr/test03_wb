@@ -1,0 +1,62 @@
+{
+    "text": [
+      {
+        "text": "Έλα να μας γνωρίσεις",
+        "color": "alpha",
+        "variant": "h4"
+      },
+      {
+        "text": "Φέρε τον σκύλο σου σε ένα οικείο μέρος",
+        "variant": "h2"
+      },
+      {
+        "text": "Είναι ο αποχωρισμός δύσκολος για εσένα και το φιλαράκι σου; Ελάτε να παίξουμε και να του δώσουμε μεζεδάκια! Θα βοηθήσει πολύ, επίσης μας αρέσουν οι επισκέψεις!",
+        "variant": "medium"
+      }
+    ],
+    "images": [
+      {
+        "src": "../../../assets/flexiblocks/homepage/cane/feature-four.png",
+        "alt": "alt text"
+      }
+    ],
+    "collection": [
+      {
+        "icon": {
+          "src": "../../../assets/flexiblocks/icons/bx-check-circle.svg",
+          "color": "beta"
+        },
+        "text": [
+          {
+            "text": "Γνωριμία & εξοικείωση",
+            "variant": "h5"
+          }
+        ]
+      },
+      {
+        "icon": {
+          "src": "../../../assets/flexiblocks/icons/bx-check-circle.svg",
+          "color": "beta"
+        },
+        "text": [
+          {
+            "text": "Εκτόνωση σε ασφαλή χώρο",
+            "variant": "h5"
+          }
+        ]
+      },
+      {
+        "icon": {
+          "src": "../../../assets/flexiblocks/icons/bx-check-circle.svg",
+          "color": "beta"
+        },
+        "text": [
+          {
+            "text": "Χωρίς κόστος",
+            "variant": "h5"
+          }
+        ]
+      }
+    ]
+  }
+  
