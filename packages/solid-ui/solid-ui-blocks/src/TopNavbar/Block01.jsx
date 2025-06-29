@@ -80,7 +80,7 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
           setActiveTab('home');
         } else if (pathname.includes('training')) {
           setActiveTab('training');
-        } else if (pathname.includes('services')) {
+        } else if (pathname.includes('boarding')) {
           setActiveTab('boarding');
         } else if (pathname.includes('rehab')) {
           setActiveTab('rehab');

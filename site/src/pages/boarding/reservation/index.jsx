@@ -14,7 +14,7 @@ import Reservation from '@solid-ui-blocks/Reservation/Block01'
 
 import { normalizeBlockContentNodes } from '@blocks-helpers'
 
-import theme from '../_theme'
+import theme from '../../_theme'
 import styles from '../_styles'
 
 const Boarding = props => {
