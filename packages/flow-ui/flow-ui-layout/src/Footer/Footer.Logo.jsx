@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from 'theme-ui'
-import PoweredByGatsby from '@components/PoweredByGatsby'
+//import PoweredByGatsby from '@components/PoweredByGatsby'
 import { HeaderLogo } from '../Header/Header.Logo'
 
 const styles = {
@@ -21,10 +21,10 @@ export const FooterLogo = () => (
       <HeaderLogo grayscale />
     </Box>
     <Box sx={styles.copyright}>
-      © {new Date().getFullYear()}, All Rights Reserved.
+      © {new Date().getFullYear()}, Με επιφύλαξη παντός δικαιώματος.
     </Box>
     <Box>
-      <PoweredByGatsby />
+      {/* <PoweredByGatsby /> */}
     </Box>
   </>
 )

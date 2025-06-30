@@ -11,7 +11,7 @@ const PageAuthors = props => {
 
   return (
     <Layout {...props}>
-      <Seo title='Our Team' />
+      <Seo title='Η Ομάδα μας' />
       <Divider />
       <Stack effectProps={{ effect: 'fadeInDown' }}>
         <PageTitle

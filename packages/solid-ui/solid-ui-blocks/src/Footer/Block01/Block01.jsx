@@ -3,7 +3,7 @@ import { Link as GLink } from 'gatsby'
 import { Container, Box, Flex } from 'theme-ui'
 import ContentText from '@solid-ui-components/ContentText'
 import ContentImages from '@solid-ui-components/ContentImages'
-import PoweredByGatsby from '@solid-ui-components/PoweredByGatsby'
+//import PoweredByGatsby from '@solid-ui-components/PoweredByGatsby'
 import ContentButtons from '@solid-ui-components/ContentButtons'
 import WithDefaultContent from '@solid-ui-blocks/WithDefaultContent'
 
@@ -35,7 +35,7 @@ const FooterBlock01 = ({ content: { images, collection } }) => {
       e.stopPropagation()
       
       if (typeof window !== 'undefined' && window.showCookieBanner) {
-        console.log('Calling showCookieBanner') // Debug log
+        //console.log('Calling showCookieBanner') // Debug log
         window.showCookieBanner()
       } else {
         //console.log('showCookieBanner not available') // Debug log

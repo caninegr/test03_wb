@@ -101,15 +101,15 @@ module.exports = {
     //Header Menu Items
     headerMenu: [
       {
-        name: 'Home',
+        name: 'Αρχική',
         slug: '/'
       },
       {
-        name: 'Our Team',
+        name: 'Η Ομάδα μας',
         slug: '/authors'
       },
       {
-        name: 'Contact',
+        name: 'Επικοινωνία',
         slug: '/contact'
       }
     ],
@@ -120,33 +120,33 @@ module.exports = {
         title: 'Σύνδεσμοι',
         items: [
           {
-            name: 'Advertise with us',
-            slug: '/contact'
+            name: 'Αρχική',
+            slug: '/'
           },
           {
-            name: 'About Us',
-            slug: '/about'
+            name: 'Άρθρα',
+            slug: '/blog'
           },
           {
-            name: 'Contact Us',
+            name: 'Επικοινωνία',
             slug: '/contact'
           }
         ]
       },
       {
-        title: 'Legal Stuff',
+        title: 'Νομικό Περιεχόμενο',
         items: [
           {
-            name: 'Privacy Notice',
-            slug: '/'
+            name: 'Πολιτική Απορρήτου',
+            slug: '/privacy'
           },
           {
-            name: 'Cookie Policy',
-            slug: '/'
+            name: 'Ρυθμίσεις Cookies',
+            slug: '#cookie-policy'
           },
           {
-            name: 'Terms Of Use',
-            slug: '/'
+            name: 'Όροι Χρήσης',
+            slug: '/termsofuse'
           }
         ]
       }

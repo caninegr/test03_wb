@@ -13,9 +13,8 @@ export const HeaderLogo = ({ ...props }) => {
 
   const { logo, logoDark } = useStaticQuery(logoQuery)
 
-  // Handle both raster images and SVGs more explicitly
-  const logoNormal = logo?.extension === 'svg' ? logo.publicURL : getImage(logo)
-  const LogoDark = logoDark?.extension === 'svg' ? logoDark.publicURL : getImage(logoDark)
+  const logoNormal = getImage(logo)
+  const LogoDark = getImage(logoDark)
 
   if (!logoNormal) return null
 
@@ -29,11 +28,9 @@ export const HeaderLogo = ({ ...props }) => {
 const logoQuery = graphql`
   query LogoQuery {
     logo: file(
-      absolutePath: { regex: "/logo\\.(jpeg|jpg|gif|png|svg)/" }
+      absolutePath: { regex: "/logo.(jpeg|jpg|gif|png)/" }
       sourceInstanceName: { eq: "asset" }
     ) {
-      extension
-      publicURL
       childImageSharp {
         gatsbyImageData(
           width: 203
@@ -44,11 +41,9 @@ const logoQuery = graphql`
       }
     }
     logoDark: file(
-      absolutePath: { regex: "/logo-dark\\.(jpeg|jpg|gif|png|svg)/" }
+      absolutePath: { regex: "/logo-dark.(jpeg|jpg|gif|png)/" }
       sourceInstanceName: { eq: "asset" }
     ) {
-      extension
-      publicURL
       childImageSharp {
         gatsbyImageData(
           width: 150

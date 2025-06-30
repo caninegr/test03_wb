@@ -6,6 +6,28 @@ import Seo from '@widgets/Seo'
 import NewsletterExpanded from '@widgets/NewsletterExpanded'
 import HeroComponent from '../components/Hero/Hero'
 
+  // Handle cookie policy link click
+  const handleFooterClick = (e) => {
+    //console.log('Footer clicked:', e.target.textContent) // Debug log
+    
+    // Check if the clicked element or its text content contains "Cookie Policy"
+    if (e.target.textContent === "Ρυθμίσεις Cookies" || 
+        e.target.innerText === "Ρυθμίσεις Cookies" ||
+        e.target.textContent?.includes("Ρυθμίσεις Cookies")) {
+      
+      console.log('Cookie Policy clicked!') // Debug log
+      e.preventDefault()
+      e.stopPropagation()
+      
+      if (typeof window !== 'undefined' && window.showCookieBanner) {
+        //console.log('Calling showCookieBanner') // Debug log
+        window.showCookieBanner()
+      } else {
+        //console.log('showCookieBanner not available') // Debug log
+      }
+    }
+  }
+
 const Posts = ({
   data: { posts = {}, featuredPosts = {}, recentPosts = {} },
   ...props
@@ -13,7 +35,7 @@ const Posts = ({
   const { pageContext: { services = {} } = {} } = props
 
   return (
-    <Layout {...props}>
+    <Layout {...props} onClick={handleFooterClick}>
       <Seo title='Home' />
       <Divider />
       <Stack effectProps={{ effect: false }}>

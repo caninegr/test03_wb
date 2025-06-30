@@ -207,7 +207,7 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                   py: 2,
                   px: [1, 2, 2],
                   mx: ['0.04rem', '0.06rem', '0.08rem'],
-                  minHeight: ['36px', '38px', '39px'],
+                  minHeight: ['36px', '38px', '40px'],
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -238,7 +238,7 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                   py: 2,
                   px: [1, 2, 2],
                   mx: ['0.04rem', '0.06rem', '0.08rem'],
-                  minHeight: ['36px', '38px', '39px'],
+                  minHeight: ['36px', '38px', '40px'],
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -269,7 +269,7 @@ const TopNavbar = ({ content: { collection }, leftJustify, rightJustify }) => {
                   py: 2,
                   px: [1, 2, 2],
                   mx: ['0.04rem', '0.06rem', '0.08rem'],
-                  minHeight: ['36px', '38px', '39px'],
+                  minHeight: ['36px', '38px', '40px'],
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
