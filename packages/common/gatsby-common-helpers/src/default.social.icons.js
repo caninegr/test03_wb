@@ -6,7 +6,8 @@ import {
   FaFacebook,
   FaEnvelope,
   FaLink,
-  FaGlobe
+  FaGlobe,
+  FaTiktok
 } from 'react-icons/fa'
 
 export default {
@@ -41,5 +42,9 @@ export default {
   website: {
     Icon: FaGlobe,
     color: 'darkslategray'
+  },
+  tiktok: {
+    Icon: FaTiktok,
+    color: '#B33F82'
   }
 }

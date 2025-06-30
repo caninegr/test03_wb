@@ -67,7 +67,7 @@ const Logo = ({ title, grayscale, image, to, ...props }) => (
 export default Logo
 
 Logo.defaultProps = {
-  to: '/'
+  to: '/blog/'
 }
 
 Logo.propTypes = {

@@ -85,16 +85,16 @@ module.exports = {
     //Site Social Media Links
     social: [
       {
-        name: 'Github',
-        url: 'https://github.com/gatsbyjs'
-      },
-      {
-        name: 'Twitter',
-        url: 'https://twitter.com/gatsbyjs'
-      },
-      {
         name: 'Instagram',
-        url: 'https://github.com/gatsbyjs'
+        url: 'https://instagram.com/canesentio'
+      },
+      {
+        name: 'Facebook',
+        url: 'https://facebook.com/canesentio'
+      },
+      {
+        name: 'TikTok',
+        url: 'https://tiktok.com/@canesentio'
       }
     ],
 
@@ -116,6 +116,23 @@ module.exports = {
 
     //Footer Menu Items (2 Sets)
     footerMenu: [
+      {
+        title: 'Πληροφορίες',
+        items: [
+          {
+            name: 'Δρυμός, Θεσσαλονίκη',
+            slug: 'https://maps.app.goo.gl/zYsHP9Ksg2psrjoU7'
+          },
+          {
+            name: '+30 2311115099',
+            slug: 'tel:+306983912430'
+          },
+          {
+            name: 'info@cane.gr',
+            slug: 'mailto:info@cane.gr'
+          }
+        ]
+      },       
       {
         title: 'Σύνδεσμοι',
         items: [
@@ -142,14 +159,14 @@ module.exports = {
           },
           {
             name: 'Ρυθμίσεις Cookies',
-            slug: '#cookie-policy'
+            slug: '/#cookie-policy'
           },
           {
             name: 'Όροι Χρήσης',
             slug: '/termsofuse'
           }
         ]
-      }
+      }    
     ]
   }
 }
