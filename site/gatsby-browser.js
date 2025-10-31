@@ -1,4 +1,17 @@
 // gatsby-browser.js
+const React = require('react');
+const ChatAssistant = require('./src/components/ChatAssistant').default;
+
+// Wrap every page with ChatAssistant
+exports.wrapPageElement = ({ element }) => {
+  return React.createElement(
+    React.Fragment,
+    null,
+    element,
+    React.createElement(ChatAssistant, null)
+  );
+};
+
 exports.onClientEntry = () => {
   const style = document.createElement('style')
   style.innerHTML = `
@@ -33,5 +46,14 @@ exports.onClientEntry = () => {
       }
     }
   `
+
+  // Load ChatKit script
+  if (typeof window !== 'undefined') {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.platform.openai.com/deployments/chatkit/chatkit.js';
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
   document.head.appendChild(style)
-}
+};
