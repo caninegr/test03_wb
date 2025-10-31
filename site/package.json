@@ -6,6 +6,7 @@
 		"develop": "gatsby develop",
 		"start": "gatsby develop",
 		"build": "gatsby build",
+		"build:production": "gatsby build --prefix-paths",
 		"clean": "gatsby clean",
 		"serve": "gatsby serve"
 	},

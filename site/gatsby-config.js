@@ -1,6 +1,7 @@
 const fontFile = require('./src/@elegantstack/solid-ui-theme/typography-fonts.json')
 
 module.exports = {
+  pathPrefix: `/ttad`,
   plugins: [    
     {
       resolve: 'gatsby-plugin-web-font-loader',
@@ -47,7 +48,8 @@ module.exports = {
       options: {
         // ATTENTION: Blog will be created on this path
         basePath: '/blog/',
-        siteUrl: process.env.URL || process.env.VERCEL_URL,
+        //siteUrl: process.env.URL || process.env.VERCEL_URL,
+        siteUrl: 'https://cane.gr/ttad',
         darkMode: false,
         homePostsPerPage: 6,
         collectionPostsPerPage: 6
@@ -59,15 +61,18 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        //host: 'https://cane.gr/ttad',
+        //sitemap: 'https://cane.gr/ttad/sitemap-0.xml',
         host: 'https://thetruthaboutdogs.gr',
-        sitemap: 'https://thetruthaboutdogs.gr/sitemap-0.xml',
+        sitemap: 'https://thetruthaboutdogs.gr/sitemap-0.xml',        
         policy: [{userAgent: '*', allow: '/'}]
       }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://thetruthaboutdogs.gr`,
+        //siteUrl: `https://cane.gr/ttad`,
+        siteUrl: `https://thetruthaboutdogs.gr/ttad`,
       },
     }
   ],
