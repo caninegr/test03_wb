@@ -1,8 +1,5 @@
+// src/api/chatkit/session.js - Using Assistants API directly
 import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -10,17 +7,32 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Create a ChatKit session
-    const session = await openai.chatkit.sessions.create({
-      // Optional: specify assistant_id if you want to use a specific assistant
-      // assistant_id: 'asst_xxxxx',
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY
     });
 
-    res.status(200).json({
-      client_secret: session.client_secret
+    // Create or use an existing assistant
+    const assistant = await openai.beta.assistants.create({
+      name: "Website Assistant",
+      instructions: "You are a helpful assistant for our website. Answer questions clearly and concisely.",
+      model: "gpt-4o",
     });
+
+    // Create a thread for the conversation
+    const thread = await openai.beta.threads.create();
+    
+    console.log('✅ Assistant and thread created');
+    
+    return res.status(200).json({
+      assistant_id: assistant.id,
+      thread_id: thread.id
+    });
+    
   } catch (error) {
-    console.error('Error creating ChatKit session:', error);
-    res.status(500).json({ error: 'Failed to create session' });
+    console.error('❌ Error:', error);
+    return res.status(500).json({ 
+      error: 'Failed to create session',
+      message: error.message
+    });
   }
 }

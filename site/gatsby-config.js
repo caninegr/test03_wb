@@ -1,4 +1,15 @@
+// gatsby-config.js
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+// If the above doesn't work, try this instead:
+require("dotenv").config({
+  path: `.env.development`,
+})
+
 const fontFile = require('./src/@elegantstack/solid-ui-theme/typography-fonts.json')
+
 
 module.exports = {
   pathPrefix: `/ttad`,
