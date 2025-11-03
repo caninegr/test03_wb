@@ -94,13 +94,13 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
 
   const { control } = useChatKit({
     history: {
-      enabled: false
+      enabled: true
     },
     header: {
       enabled: true,
       title: {
-        enabled: true,
-        text: 'test>'
+        enabled: true
+        //text: 'test>'
       }
     },
     theme: {
