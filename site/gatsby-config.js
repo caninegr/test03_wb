@@ -60,7 +60,8 @@ module.exports = {
         // ATTENTION: Blog will be created on this path
         basePath: '/blog/',
         //siteUrl: process.env.URL || process.env.VERCEL_URL,
-        siteUrl: 'https://cane.gr/ttad',
+        //siteUrl: 'https://cane.gr/ttad',
+        siteUrl: `https://thetruthaboutdogs.gr`,
         darkMode: false,
         homePostsPerPage: 6,
         collectionPostsPerPage: 6
@@ -83,7 +84,7 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         //siteUrl: `https://cane.gr/ttad`,
-        siteUrl: `https://thetruthaboutdogs.gr/ttad`,
+        siteUrl: `https://thetruthaboutdogs.gr`,
       },
     }
   ],
