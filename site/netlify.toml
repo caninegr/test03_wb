@@ -1,5 +1,6 @@
-# netlify.toml (place in site folder)
+# netlify.toml (in site folder)
 [build]
+  base = "site"  # 👈 ADD THIS - tells Netlify to run from site folder
   command = "gatsby build"
   functions = "netlify/functions"
   publish = "public"
