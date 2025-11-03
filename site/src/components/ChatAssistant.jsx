@@ -1,4 +1,4 @@
-// src/components/ChatAssistant.jsx - COMPLETE WITH CLEAR HISTORY
+// src/components/ChatAssistant.jsx - COMPLETE WITH NO WARNINGS
 import React, { useState, useEffect, useRef } from 'react';
 
 const ChatAssistant = () => {
@@ -53,6 +53,14 @@ const ChatAssistant = () => {
           e.currentTarget.style.backgroundColor = '#84CC16';
           e.currentTarget.style.transform = 'scale(1)';
         }}
+        onFocus={(e) => {
+          e.currentTarget.style.backgroundColor = '#65A30D';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onBlur={(e) => {
+          e.currentTarget.style.backgroundColor = '#84CC16';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? (
@@ -73,6 +81,7 @@ const ChatAssistant = () => {
 
 const ChatWindow = ({ ChatKit, useChatKit }) => {
   const [currentThreadId, setCurrentThreadId] = useState(null);
+  const ref = useRef(null);
   
   // Load saved thread ID from localStorage on mount
   useEffect(() => {
@@ -83,7 +92,7 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
     }
   }, []);
 
-  const { control, ref } = useChatKit({
+  const { control } = useChatKit({
     api: {
       getClientSecret: async (currentClientSecret) => {
         console.log('ChatKit requesting client secret...');
@@ -182,6 +191,14 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
           e.currentTarget.style.transform = 'scale(1.05)';
         }}
         onMouseOut={(e) => {
+          e.currentTarget.style.backgroundColor = '#f3f4f6';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        onFocus={(e) => {
+          e.currentTarget.style.backgroundColor = '#e5e7eb';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onBlur={(e) => {
           e.currentTarget.style.backgroundColor = '#f3f4f6';
           e.currentTarget.style.transform = 'scale(1)';
         }}
