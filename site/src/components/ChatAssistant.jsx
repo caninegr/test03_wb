@@ -93,6 +93,58 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
   }, []);
 
   const { control } = useChatKit({
+    history: {
+      enabled: false
+    },
+    header: {
+      enabled: true,
+      title: {
+        enabled: true,
+        text: 'test>'
+      }
+    },
+    theme: {
+      colorScheme: 'dark'
+    },
+    startScreen: {
+      greeting: "Καλώς όρισες στο Cane Sentio!",
+      prompts: [
+        {
+          label: "Θέλω να εκπαιδεύσω τον σκύλο μου",
+          prompt: "Μπορείτε να με βοηθήσετε με την εκπαίδευση του σκύλου μου;",
+          icon: "book-open"
+        },
+        {
+          label: "Ψάχνω φιλοξενία για το κατοικίδιο μου",
+          prompt: "Χρειάζομαι πληροφορίες για την φιλοξενία του σκύλου μου",
+          icon: "calendar"
+        },
+        {
+          label: "Ενδιαφέρομαι για αποκατάσταση",
+          prompt: "Θα ήθελα πληροφορίες για αποκατάσταση, φυσικοθεραπεία και υδροθεραπεία",
+          icon: "lifesaver"
+        },
+      ],
+    },
+    composer: {
+      placeholder: "Το μήνυμα σου...",
+    },
+    entities: {
+      onTagSearch: async (query) => [
+        { id: "user_123", title: "Jane Doe" },
+      ],
+      onRequestPreview: async (entity) => ({
+        preview: {
+          type: "Card",
+          children: [
+            { type: "Text", value: `Profile: ${entity.title}` },
+            { type: "Text", value: "Role: Developer" },
+          ],
+        },
+      }),
+    },
+
+    
     api: {
       getClientSecret: async (currentClientSecret) => {
         console.log('ChatKit requesting client secret...');
