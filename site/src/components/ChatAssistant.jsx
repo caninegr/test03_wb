@@ -1,5 +1,5 @@
-// src/components/ChatAssistant.jsx - FINAL WORKING VERSION
-import React, { useState, useEffect } from 'react';
+// src/components/ChatAssistant.jsx - COMPLETE WITH CLEAR HISTORY
+import React, { useState, useEffect, useRef } from 'react';
 
 const ChatAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +24,7 @@ const ChatAssistant = () => {
 
   return (
     <>
+      {/* Main Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         style={{
@@ -45,11 +46,11 @@ const ChatAssistant = () => {
           transition: 'all 0.2s',
         }}
         onMouseOver={(e) => {
-          e.currentTarget.style.backgroundColor = '#1d4ed8';
+          e.currentTarget.style.backgroundColor = '#65A30D';
           e.currentTarget.style.transform = 'scale(1.05)';
         }}
         onMouseOut={(e) => {
-          e.currentTarget.style.backgroundColor = '#2563eb';
+          e.currentTarget.style.backgroundColor = '#84CC16';
           e.currentTarget.style.transform = 'scale(1)';
         }}
         aria-label={isOpen ? "Close chat" : "Open chat"}
@@ -71,19 +72,26 @@ const ChatAssistant = () => {
 };
 
 const ChatWindow = ({ ChatKit, useChatKit }) => {
-  // ✅ CORRECT API: Use HostedApiConfig with getClientSecret
-  const { control } = useChatKit({
+  const [currentThreadId, setCurrentThreadId] = useState(null);
+  
+  // Load saved thread ID from localStorage on mount
+  useEffect(() => {
+    const savedThreadId = localStorage.getItem('chatkit_thread_id');
+    if (savedThreadId) {
+      console.log('📂 Restoring thread:', savedThreadId);
+      setCurrentThreadId(savedThreadId);
+    }
+  }, []);
+
+  const { control, ref } = useChatKit({
     api: {
       getClientSecret: async (currentClientSecret) => {
         console.log('ChatKit requesting client secret...');
-        console.log('Current secret:', currentClientSecret ? 'exists' : 'null');
         
-        // If we already have a valid secret, return it
         if (currentClientSecret) {
           return currentClientSecret;
         }
         
-        // Otherwise fetch a new one
         const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
           ? '/api/chatkit/session'
           : '/.netlify/functions/chatkit-session';
@@ -104,29 +112,109 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
         return data.client_secret;
       },
     },
+    initialThread: currentThreadId,
   });
 
+  // Listen for thread changes and save to localStorage
+  useEffect(() => {
+    const chaткitElement = ref.current;
+    
+    if (!chaткitElement) return;
+
+    const handleThreadChange = (event) => {
+      const newThreadId = event.detail.threadId;
+      console.log('💾 Thread changed:', newThreadId);
+      
+      if (newThreadId) {
+        localStorage.setItem('chatkit_thread_id', newThreadId);
+        setCurrentThreadId(newThreadId);
+      } else {
+        localStorage.removeItem('chatkit_thread_id');
+        setCurrentThreadId(null);
+      }
+    };
+
+    chaткitElement.addEventListener('chatkit.thread.change', handleThreadChange);
+
+    return () => {
+      chaткitElement.removeEventListener('chatkit.thread.change', handleThreadChange);
+    };
+  }, [ref]);
+
+  // Clear history and start new conversation
+  const handleClearHistory = () => {
+    console.log('🗑️ Clearing chat history');
+    localStorage.removeItem('chatkit_thread_id');
+    setCurrentThreadId(null);
+    
+    // Tell ChatKit to start a new thread
+    if (ref.current) {
+      ref.current.setThreadId(null);
+    }
+  };
+
   return (
-    <div
-      style={{
-        position: 'fixed',
-        bottom: '6rem',
-        right: '1.5rem',
-        zIndex: 9999,
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-        borderRadius: '0.5rem',
-        overflow: 'hidden',
-        backgroundColor: 'white',
-      }}
-    >
-      <ChatKit 
-        control={control}
+    <>
+      {/* Clear History Button */}
+      <button
+        onClick={handleClearHistory}
+        title="Start new conversation"
         style={{
-          height: '600px',
-          width: '400px',
+          position: 'fixed',
+          bottom: '6rem',
+          right: '6rem',
+          width: '2.5rem',
+          height: '2.5rem',
+          backgroundColor: '#f3f4f6',
+          color: '#6b7280',
+          borderRadius: '9999px',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 9999,
+          border: 'none',
+          cursor: 'pointer',
+          transition: 'all 0.2s',
         }}
-      />
-    </div>
+        onMouseOver={(e) => {
+          e.currentTarget.style.backgroundColor = '#e5e7eb';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.backgroundColor = '#f3f4f6';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        aria-label="Start new conversation"
+      >
+        <svg style={{ width: '1.25rem', height: '1.25rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+
+      {/* Chat Window */}
+      <div
+        style={{
+          position: 'fixed',
+          bottom: '6rem',
+          right: '1.5rem',
+          zIndex: 9999,
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          borderRadius: '0.5rem',
+          overflow: 'hidden',
+          backgroundColor: 'white',
+        }}
+      >
+        <ChatKit 
+          control={control}
+          ref={ref}
+          style={{
+            height: '600px',
+            width: '400px',
+          }}
+        />
+      </div>
+    </>
   );
 };
 
