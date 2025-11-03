@@ -17,7 +17,7 @@ const WithRecentPosts = ({ children, limit = 3 }) => {
     },
     text: [
       {
-        text: post.category.name,
+        text: post.category?.name || 'Uncategorized',
         color: 'alphaDark'
       },
       {

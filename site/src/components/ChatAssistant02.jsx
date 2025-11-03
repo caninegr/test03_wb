@@ -1,4 +1,4 @@
-// src/components/ChatAssistant.jsx - FINAL WORKING VERSION
+// src/components/ChatAssistant.jsx - COMPLETE CORRECT VERSION
 import React, { useState, useEffect } from 'react';
 
 const ChatAssistant = () => {
@@ -9,12 +9,11 @@ const ChatAssistant = () => {
   useEffect(() => {
     import('@openai/chatkit-react')
       .then((module) => {
-        console.log('✅ ChatKit loaded');
         setChatKit(() => module.ChatKit);
-        setUseChatKit(() => module.useChatKit);
+        setUseChatKit(() => module.useChatKit);  // 👈 Also import useChatKit!
       })
       .catch((error) => {
-        console.error('❌ Error loading ChatKit:', error);
+        console.error('Error loading ChatKit:', error);
       });
   }, []);
 
@@ -24,6 +23,7 @@ const ChatAssistant = () => {
 
   return (
     <>
+      {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         style={{
@@ -65,45 +65,42 @@ const ChatAssistant = () => {
         )}
       </button>
 
+      {/* Chat Window */}
       {isOpen && <ChatWindow ChatKit={ChatKit} useChatKit={useChatKit} />}
     </>
   );
 };
 
+// Separate component that uses the hook
 const ChatWindow = ({ ChatKit, useChatKit }) => {
-  // ✅ CORRECT API: Use HostedApiConfig with getClientSecret
+  // Function that ChatKit will call to get the session
+  const getClientSecret = async () => {
+    console.log('ChatKit requesting session...');
+    
+    const endpoint = typeof window !== 'undefined' && 
+                     (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+      ? '/api/chatkit/session'
+      : '/.netlify/functions/chatkit-session';
+    
+    console.log('Fetching from:', endpoint);
+    
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    
+    if (!res.ok) {
+      throw new Error('Failed to get session');
+    }
+    
+    const data = await res.json();
+    console.log('✅ Session received');
+    return data.client_secret;
+  };
+
+  // Use the hook to create control
   const { control } = useChatKit({
-    api: {
-      getClientSecret: async (currentClientSecret) => {
-        console.log('ChatKit requesting client secret...');
-        console.log('Current secret:', currentClientSecret ? 'exists' : 'null');
-        
-        // If we already have a valid secret, return it
-        if (currentClientSecret) {
-          return currentClientSecret;
-        }
-        
-        // Otherwise fetch a new one
-        const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-          ? '/api/chatkit/session'
-          : '/.netlify/functions/chatkit-session';
-        
-        console.log('Fetching from:', endpoint);
-        
-        const res = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-        });
-        
-        if (!res.ok) {
-          throw new Error(`Failed to get session: ${res.status}`);
-        }
-        
-        const data = await res.json();
-        console.log('✅ Got client secret');
-        return data.client_secret;
-      },
-    },
+    getClientSecret: getClientSecret,  // 👈 Pass as an option to useChatKit
   });
 
   return (
@@ -119,11 +116,11 @@ const ChatWindow = ({ ChatKit, useChatKit }) => {
         backgroundColor: 'white',
       }}
     >
-      <ChatKit 
-        control={control}
+      <ChatKit
+        control={control}  // 👈 Pass the control object
         style={{
           height: '600px',
-          width: '400px',
+          width: typeof window !== 'undefined' && window.innerWidth > 768 ? '450px' : '400px',
         }}
       />
     </div>

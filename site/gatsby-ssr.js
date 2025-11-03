@@ -1,15 +1,5 @@
-// gatsby-ssr.js
+// gatsby-ssr.js - MINIMAL (no ChatAssistant!)
 const React = require('react');
-const ChatAssistant = require('./src/components/ChatAssistant').default;
-
-exports.wrapPageElement = ({ element }) => {
-  return React.createElement(
-    React.Fragment,
-    null,
-    element,
-    React.createElement(ChatAssistant, null)
-  );
-};
 
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([

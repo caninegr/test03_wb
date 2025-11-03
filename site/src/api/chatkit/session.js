@@ -1,13 +1,28 @@
-// src/api/chatkit/session.js - CREATE WORKFLOW WITH ASSISTANT
+// src/api/chatkit/session.js - SIMPLE VERSION
 import OpenAI from 'openai';
 import crypto from 'crypto';
-
-// Cache workflow to avoid recreating it every time
-let cachedWorkflowId = null;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  console.log('=== Creating ChatKit Session ===');
+  console.log('Has OPENAI_API_KEY:', !!process.env.OPENAI_API_KEY);
+  console.log('Has CHATKIT_WORKFLOW_ID:', !!process.env.CHATKIT_WORKFLOW_ID);
+  console.log('Workflow ID:', process.env.CHATKIT_WORKFLOW_ID);
+
+  if (!process.env.OPENAI_API_KEY) {
+    return res.status(500).json({ 
+      error: 'Missing OPENAI_API_KEY environment variable' 
+    });
+  }
+
+  if (!process.env.CHATKIT_WORKFLOW_ID) {
+    return res.status(500).json({ 
+      error: 'Missing CHATKIT_WORKFLOW_ID environment variable',
+      hint: 'Add CHATKIT_WORKFLOW_ID=wf_xxxxx to .env.development'
+    });
   }
 
   try {
@@ -17,24 +32,12 @@ export default async function handler(req, res) {
 
     const userId = `user_${crypto.randomUUID()}`;
     
-    // Create workflow only once and cache it
-    if (!cachedWorkflowId) {
-      console.log('Creating workflow with your assistant...');
-      const workflow = await openai.beta.chatkit.workflows.create({
-        assistant_id: 'asst_NwhX8DqlGv4CAfJg5wqGeHP1'  // 👈 Your assistant ID
-      });
-      cachedWorkflowId = workflow.id;
-      console.log('✅ Workflow created:', cachedWorkflowId);
-    } else {
-      console.log('Using cached workflow:', cachedWorkflowId);
-    }
-    
-    // Create session with the workflow
     console.log('Creating session for user:', userId);
+    
     const session = await openai.beta.chatkit.sessions.create({
       user: userId,
       workflow: {
-        id: cachedWorkflowId  // Use the workflow ID (wf_xxx), not assistant ID
+        id: process.env.CHATKIT_WORKFLOW_ID  // Use pre-created workflow
       }
     });
     
@@ -45,18 +48,10 @@ export default async function handler(req, res) {
     });
     
   } catch (error) {
-    console.error('❌ Error:', error.message);
-    console.error('Full error:', error);
-    
-    // Clear cache if workflow is invalid
-    if (error.message?.includes('Workflow') || error.message?.includes('not found')) {
-      console.log('Clearing cached workflow...');
-      cachedWorkflowId = null;
-    }
-    
+    console.error('❌ Error creating session:', error.message);
     return res.status(500).json({ 
-      error: 'Failed to create session',
-      message: error.message
+      error: error.message,
+      details: 'Check server logs for more info'
     });
   }
 }

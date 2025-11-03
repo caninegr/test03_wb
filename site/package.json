@@ -1,25 +1,28 @@
 {
-	"name": "@elegantstack/gatsby-starter-flexiblocks",
-	"private": true,
-	"version": "4.0.0",
-	"scripts": {
-		"develop": "gatsby develop",
-		"start": "gatsby develop",
-		"build": "gatsby build",
-		"build:production": "gatsby build --prefix-paths",
-		"clean": "gatsby clean",
-		"serve": "gatsby serve"
-	},
-	"dependencies": {
-		"@elegantstack/gatsby-theme-flexiblocks": "*",
-		"@elegantstack/gatsby-theme-flexiblog-news": "^4.0.0",
-		"gatsby": "5.6.0",
-		"gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-		"openai": "^6.7.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
-	"devDependencies": {
-		"prettier": "^2.8.4"
-	}
+  "name": "@elegantstack/gatsby-starter-flexiblocks",
+  "private": true,
+  "version": "4.0.0",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "build:production": "gatsby build --prefix-paths",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "@elegantstack/gatsby-theme-flexiblocks": "*",
+    "@elegantstack/gatsby-theme-flexiblog-news": "^4.0.0",
+    "@openai/chatkit-react": "^1.2.0",
+    "gatsby": "^5.6.0",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "openai": "^6.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "prettier": "^2.8.4",
+    "react-scripts": "^5.0.1"
+  }
 }

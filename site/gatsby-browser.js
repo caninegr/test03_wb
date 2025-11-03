@@ -1,9 +1,21 @@
-// gatsby-browser.js
+// gatsby-browser.js - BROWSER ONLY
 const React = require('react');
-const ChatAssistant = require('./src/components/ChatAssistant').default;
 
-// Wrap every page with ChatAssistant
+// Only load ChatAssistant if we're in the browser
+let ChatAssistant = null;
+if (typeof window !== 'undefined') {
+  try {
+    ChatAssistant = require('./src/components/ChatAssistant').default;
+  } catch (error) {
+    console.error('Failed to load ChatAssistant:', error);
+  }
+}
+
 exports.wrapPageElement = ({ element }) => {
+  if (!ChatAssistant || typeof window === 'undefined') {
+    return element;
+  }
+  
   return React.createElement(
     React.Fragment,
     null,
@@ -47,7 +59,6 @@ exports.onClientEntry = () => {
     }
   `
 
-  // Load ChatKit script
   if (typeof window !== 'undefined') {
     const script = document.createElement('script');
     script.src = 'https://cdn.platform.openai.com/deployments/chatkit/chatkit.js';
