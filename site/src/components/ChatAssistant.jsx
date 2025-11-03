@@ -32,7 +32,7 @@ const ChatAssistant = () => {
           right: '1.5rem',
           width: '3.5rem',
           height: '3.5rem',
-          backgroundColor: '#2563eb',
+          backgroundColor: '#84CC16',
           color: 'white',
           borderRadius: '9999px',
           boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
