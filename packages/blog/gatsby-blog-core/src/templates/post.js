@@ -1,7 +1,11 @@
 import { graphql } from 'gatsby'
 import PostPage from '../containers/Post'
 
-export default PostPage
+function PostTemplate({ children, ...props }) {
+  return <PostPage {...props}>{children}</PostPage>
+}
+
+export default PostTemplate
 
 export const pageQuery = graphql`
   query PostPageQuery(

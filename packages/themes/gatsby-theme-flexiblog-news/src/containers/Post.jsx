@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import { Card } from 'theme-ui'
 import { Layout, Stack, Main, Sidebar } from '@layout'
 import CardList from '@components/CardList'
@@ -20,6 +20,7 @@ import {
 
 const Post = ({
   data: { post, tagCategoryPosts, tagPosts, categoryPosts, previous, next },
+  children,
   ...props
 }) => {
   const relatedPosts = [
@@ -41,7 +42,9 @@ const Post = ({
         <Main>
           <Card variant='paper'>
             <PostImage {...post} inCard />
-            <PostBody {...post} />
+          
+            <PostBody body={children}/>
+           
             <PostTagsShare {...post} location={props.location} />
             {services.disqus && <PostComments {...post} />}
             {services.graphComment && <PostCommentsGraph {...post} />}

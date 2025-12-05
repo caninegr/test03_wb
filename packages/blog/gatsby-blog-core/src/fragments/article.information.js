@@ -19,7 +19,13 @@ export const query = graphql`
     author {
       ...ArticleAuthor
     }
-    body
+    parent {
+      ... on Mdx {
+        internal {
+          contentFilePath
+        }
+      }
+    }
     keywords
     tags {
       id
