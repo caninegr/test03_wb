@@ -25,7 +25,6 @@ const Services = props => {
 
   return (
     <Layout {...props}>
-      <Seo title='Home' />
       {/* Modals */}
       <ModalWithTabs content={content['authentication']} reverse />
       <ModalWithTabs content={content['contact']} />
@@ -70,3 +69,5 @@ export const query = graphql`
 `
 
 export default Services
+
+export const Head = () => <Seo title='Home' />

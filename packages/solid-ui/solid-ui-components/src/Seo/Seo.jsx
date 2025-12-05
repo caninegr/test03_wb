@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import useSiteMetadata from '@blocks-helpers/useSiteMetadata'
 
 const Seo = ({
@@ -32,8 +31,8 @@ const Seo = ({
    */
 
   const metaTags = [
-    { itemprop: 'name', content: title || site.title },
-    { itemprop: 'description', content: description },
+    { itemProp: 'name', content: title || site.title },
+    { itemProp: 'description', content: description },
     { name: 'description', content: description },
 
     { property: 'og:title', content: title || site.title },
@@ -59,15 +58,16 @@ const Seo = ({
 
   metaTags.push({ name: 'initial-scale', content: '1.0' })
 
+  const pageTitle = title ? `${title} | ${site.title}` : site.title
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: 'en'
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.title}`}
-      meta={metaTags}
-    />
+    <>
+      <html lang="en" />
+      <title>{pageTitle}</title>
+      {metaTags.map((tag, index) => (
+        <meta key={index} {...tag} />
+      ))}
+    </>
   )
 }
 

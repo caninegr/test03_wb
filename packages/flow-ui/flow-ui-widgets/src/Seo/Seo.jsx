@@ -1,6 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { helmetJsonLdProp } from 'react-schemaorg'
 import { getSrc } from 'gatsby-plugin-image'
 import useSiteMetadata from '@helpers-blog/useSiteMetadata'
 import getImageVariant from '@components/utils/getImageVariant'
@@ -40,8 +38,8 @@ const Seo = ({
    */
 
   const metaTags = [
-    { itemprop: 'name', content: title || site.title },
-    { itemprop: 'description', content: description },
+    { itemProp: 'name', content: title || site.title },
+    { itemProp: 'description', content: description },
     { name: 'description', content: description },
 
     { property: 'og:title', content: title || site.title },
@@ -82,11 +80,11 @@ const Seo = ({
    * Structured Data (JSON-LD)
    */
 
-  const scripts = []
+  const jsonLdScripts = []
 
   // Article
   if (title && author) {
-    const articleJsonLd = helmetJsonLdProp({
+    const articleJsonLd = {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: title,
@@ -97,13 +95,17 @@ const Seo = ({
         name: author.name,
         url: author.slug
       }
-    })
-    scripts.push(articleJsonLd)
+    }
+    jsonLdScripts.push(
+      <script type="application/ld+json" key="article-jsonld">
+        {JSON.stringify(articleJsonLd)}
+      </script>
+    )
   }
 
   // Breadcrumb
   if (title && category) {
-    const breadcrumbJsonLd = helmetJsonLdProp({
+    const breadcrumbJsonLd = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -120,22 +122,26 @@ const Seo = ({
           item: `${'https://thetruthaboutdogs.gr'}${category.slug}`
         }
       ]
-    })
-    scripts.push(breadcrumbJsonLd)
+    }
+    jsonLdScripts.push(
+      <script type="application/ld+json" key="breadcrumb-jsonld">
+        {JSON.stringify(breadcrumbJsonLd)}
+      </script>
+    )
   }
 
+  const pageTitle = title ? `${title} | ${site.title}` : site.title
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: locale || 'en'
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.title}`}
-      meta={metaTags}
-      script={scripts}
-    >
+    <>
+      <html lang={locale || 'en'} />
+      <title>{pageTitle}</title>
+      {metaTags.map((tag, index) => (
+        <meta key={index} {...tag} />
+      ))}
+      {jsonLdScripts}
       {children}
-    </Helmet>
+    </>
   )
 }
 

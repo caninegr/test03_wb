@@ -9,10 +9,12 @@
 
 
 
-export default {
+const theme = {
   colors: {
     background: `#FFFFFF`,
     footerBg: `transparent`,
     headerBg: `white`
   }
 }
+
+export default theme

@@ -67,7 +67,7 @@ module.exports = {
         collectionPostsPerPage: 6
       }
     },
-        {
+    {
       resolve: 'gatsby-plugin-sitemap'
     },
     {
@@ -185,5 +185,9 @@ module.exports = {
         ]
       }    
     ]
+  },
+  // Suppress GraphQL query warnings from theme templates
+  flags: {
+    DEV_SSR: false
   }
 }

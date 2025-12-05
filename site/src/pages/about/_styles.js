@@ -5,7 +5,7 @@
  *
  */
 
-export default {
+const styles = {
   heroContainer: {
     bg: `white`,
     pt: [6, 7],
@@ -19,3 +19,5 @@ export default {
     px: [4, 0]
   }
 }
+
+export default styles

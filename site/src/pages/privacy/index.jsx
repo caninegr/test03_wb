@@ -21,11 +21,6 @@ console.log('Terms content:', content['terms-of-use'])
 
   return (
     <Layout {...props}>
-      <Seo 
-        title='Όροι Χρήσης' 
-        description='Οι όροι και προϋποθέσεις χρήσης του ιστότοπου μας.'
-      />
-      
       {/* Header */}
       <TopNavbar sx={styles.topNavbarContainer} content={content['top-navbar']} />
       <Header content={content['header']} />
@@ -58,3 +53,8 @@ export const query = graphql`
 `
 
 export default PrivacyPage
+
+export const Head = () => <Seo 
+        title='Όροι Χρήσης' 
+        description='Οι όροι και προϋποθέσεις χρήσης του ιστότοπου μας.'
+      />

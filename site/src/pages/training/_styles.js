@@ -5,7 +5,7 @@
  *
  */
 
-export default {
+const styles = {
   heroContainer: {
     position: `relative`,
     pt: [6, 7],
@@ -21,3 +21,5 @@ export default {
     }
   }
 }
+
+export default styles

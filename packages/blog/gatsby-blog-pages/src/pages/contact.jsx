@@ -9,7 +9,6 @@ import Commitment from '@widgets/Commitment'
 
 const PageContact = props => (
   <Layout {...props}>
-    <Seo title='Φόρμα Επικοινωνίας' />
     <Divider />
     <Stack>
       <Main>
@@ -30,3 +29,5 @@ const PageContact = props => (
 )
 
 export default PageContact
+
+export const Head = () => <Seo title='Φόρμα Επικοινωνίας' />

@@ -52,7 +52,9 @@ module.exports = options => {
           { resolve: 'gatsby-remark-smartypants' },
           ...options.gatsbyRemarkPlugins
         ],
-        remarkPlugins: [require('remark-slug'), ...options.remarkPlugins]
+        mdxOptions: {
+          remarkPlugins: [require('remark-slug'), ...options.remarkPlugins]
+        }
       }
     },
     'gatsby-plugin-catch-links',

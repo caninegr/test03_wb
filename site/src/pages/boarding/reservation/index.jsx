@@ -23,7 +23,6 @@ const Boarding = props => {
 
   return (
     <Layout theme={theme} {...props}>
-      <Seo title='Home' />
       {/* Modals */}
       <ModalWithTabs content={content['authentication']} reverse />
       <ModalWithTabs content={content['contact']} />
@@ -65,3 +64,5 @@ export const query = graphql`
   }
 `
 export default Boarding
+
+export const Head = () => <Seo title='Home' />

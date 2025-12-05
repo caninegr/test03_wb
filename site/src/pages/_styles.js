@@ -9,7 +9,7 @@
 //import holographic from './assets/holographic.svg'
 import holographic from './assets/holographic.webp?url'
 
-export default {
+const styles = {
   heroContainer: {
     position: `relative`,
     py: [3],
@@ -134,3 +134,5 @@ export default {
   // }
   
 }
+
+export default styles

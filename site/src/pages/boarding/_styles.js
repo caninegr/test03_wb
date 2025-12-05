@@ -7,7 +7,7 @@
 
 import holographic from '../assets/herotemp.jpg'
 
-export default {
+const styles = {
   heroContainer: {
     position: `relative`,
     py: [3],
@@ -119,3 +119,5 @@ export default {
     px: [4, 0]
   }
 }
+
+export default styles
