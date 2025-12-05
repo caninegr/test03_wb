@@ -16,6 +16,7 @@
     "@openai/chatkit-react": "^1.2.0",
     "dotenv": "^17.2.3",
     "gatsby": "^5.15.0",
+    "gatsby-plugin-canonical-urls": "^5.15.0",
     "gatsby-plugin-gdpr-cookies": "^2.0.10",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.15.0",
