@@ -1,11 +1,12 @@
 // gatsby-config.js
-try {
-  require("dotenv").config({
-    path: `.env.${process.env.NODE_ENV}`,
-  })
-} catch (e) {
-  // dotenv not available, using Netlify environment variables
-}
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+// If the above doesn't work, try this instead:
+require("dotenv").config({
+  path: `.env.development`,
+})
 
 const fontFile = require('./src/@elegantstack/solid-ui-theme/typography-fonts.json')
 
